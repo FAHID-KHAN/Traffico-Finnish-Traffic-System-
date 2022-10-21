@@ -1,0 +1,24 @@
+<RCC>
+  <qresource prefix="roadIcons">
+    <file>assets/icons/bars-solid.svg</file>
+    <file>assets/icons/bolt-solid.svg</file>
+    <file>assets/icons/chart-column-solid.svg</file>
+    <file>assets/icons/chart-line-solid.svg</file>
+    <file>assets/icons/chart-pie-solid.svg</file>
+    <file>assets/icons/chart-simple-solid.svg</file>
+    <file>assets/icons/comment-dots-regular.svg</file>
+    <file>assets/icons/comment-regular.svg</file>
+    <file>assets/icons/comment-solid.svg</file>
+    <file>assets/icons/envelope-circle-check-solid.svg</file>
+    <file>assets/icons/envelope-regular.svg</file>
+    <file>assets/icons/envelope-solid.svg</file>
+    <file>assets/icons/message-regular.svg</file>
+    <file>assets/icons/message-solid.svg</file>
+    <file>assets/icons/road-circle-check-solid.svg</file>
+    <file>assets/icons/road-circle-xmark-solid.svg</file>
+    <file>assets/icons/road-solid.svg</file>
+    <file>assets/icons/square-poll-vertical-solid.svg</file>
+    <file>assets/icons/traffic-light-solid.svg</file>
+    <file>assets/icons/triangle-exclamation-solid.svg</file>
+  </qresource>
+</RCC>
