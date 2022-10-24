@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>992</width>
-    <height>796</height>
+    <width>1002</width>
+    <height>842</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -448,7 +448,7 @@ QGraphicsView{
                 <number>0</number>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="mainPage">
                 <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -495,7 +495,7 @@ QGraphicsView{
                         <number>10</number>
                        </property>
                        <property name="topMargin">
-                        <number>30</number>
+                        <number>10</number>
                        </property>
                        <property name="rightMargin">
                         <number>10</number>
@@ -530,7 +530,7 @@ QGraphicsView{
                           <number>10</number>
                          </property>
                          <property name="verticalSpacing">
-                          <number>30</number>
+                          <number>20</number>
                          </property>
                          <property name="leftMargin">
                           <number>15</number>
@@ -790,19 +790,19 @@ QGraphicsView{
                      <widget class="QWidget" name="searchFrame_2" native="true">
                       <layout class="QVBoxLayout" name="verticalLayout_8">
                        <property name="spacing">
-                        <number>15</number>
+                        <number>10</number>
                        </property>
                        <property name="leftMargin">
                         <number>10</number>
                        </property>
                        <property name="topMargin">
-                        <number>30</number>
+                        <number>5</number>
                        </property>
                        <property name="rightMargin">
                         <number>10</number>
                        </property>
                        <property name="bottomMargin">
-                        <number>10</number>
+                        <number>5</number>
                        </property>
                        <item alignment="Qt::AlignTop">
                         <widget class="QLabel" name="titleLabel_2">
@@ -831,7 +831,7 @@ QGraphicsView{
                           <number>10</number>
                          </property>
                          <property name="verticalSpacing">
-                          <number>30</number>
+                          <number>20</number>
                          </property>
                          <property name="leftMargin">
                           <number>15</number>
@@ -871,6 +871,12 @@ QGraphicsView{
                              <width>0</width>
                              <height>30</height>
                             </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>10</pointsize>
+                            </font>
                            </property>
                            <property name="focusPolicy">
                             <enum>Qt::WheelFocus</enum>
@@ -919,6 +925,12 @@ QGraphicsView{
                              <height>30</height>
                             </size>
                            </property>
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
                            <property name="focusPolicy">
                             <enum>Qt::WheelFocus</enum>
                            </property>
@@ -940,6 +952,12 @@ QGraphicsView{
                              <width>0</width>
                              <height>30</height>
                             </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>10</pointsize>
+                            </font>
                            </property>
                            <property name="focusPolicy">
                             <enum>Qt::WheelFocus</enum>
@@ -975,6 +993,12 @@ QGraphicsView{
                              <width>0</width>
                              <height>30</height>
                             </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>10</pointsize>
+                            </font>
                            </property>
                            <property name="focusPolicy">
                             <enum>Qt::WheelFocus</enum>
@@ -1108,13 +1132,13 @@ QGraphicsView{
                      <widget class="QWidget" name="searchFrame_3" native="true">
                       <layout class="QVBoxLayout" name="verticalLayout_10">
                        <property name="spacing">
-                        <number>15</number>
+                        <number>20</number>
                        </property>
                        <property name="leftMargin">
                         <number>10</number>
                        </property>
                        <property name="topMargin">
-                        <number>30</number>
+                        <number>10</number>
                        </property>
                        <property name="rightMargin">
                         <number>10</number>
@@ -1149,7 +1173,7 @@ QGraphicsView{
                           <number>10</number>
                          </property>
                          <property name="verticalSpacing">
-                          <number>30</number>
+                          <number>20</number>
                          </property>
                          <property name="leftMargin">
                           <number>15</number>
