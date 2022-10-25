@@ -10,7 +10,12 @@ class Controller:
     def __init__(self):
         self._app = QtWidgets.QApplication(sys.argv)
         self._model = Model()
-        self._view = MainWindow()
+        self._view = MainWindow(self)
+
+    def submit_message(self):
+        self._model.get_message_data(self._view.ui.msg_input.currentText())
+        self._view.ui.msg_input.setCurrentIndex(0)
+        print(self._model.message_data)
 
     def run(self):
         self._view.show()

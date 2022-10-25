@@ -3,10 +3,9 @@ from interface import Ui_MainWindow
 
 
 class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-
-        # TODO: instantiate controller
+    def __init__(self, controller, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.controller = controller
 
         # init UI
         self.ui = Ui_MainWindow()
@@ -18,12 +17,15 @@ class MainWindow(QMainWindow):
         # change pages on clicked
         self.click_pages()
 
+        # Send signals to the controller
+        self.ui.msg_submit_btn.clicked.connect(self.controller.submit_message)
+
         # min window size
         # self.setMinimumSize(800, 640)
 
     def add_combo_items(self):
-        location_items = [
-            "-Select-",
+        locations = [
+            "",
             "All",
             "Municipalities",
             "State-roads",
@@ -31,8 +33,15 @@ class MainWindow(QMainWindow):
             "Autori-kuopio",
             "Paikannin-kuopio",
             ]
-        self.ui.loc_input.addItems(location_items)
-        self.ui.msg_input.addItems(location_items)
+        msg_types = [
+            "",
+            "TRAFFIC_ANNOUNCEMENT",
+            "EXEMPTED_TRANSPORT",
+            "WEIGHT_RESTRICTION",
+            "ROAD_WORK",
+            ]
+        self.ui.loc_input.addItems(locations)
+        self.ui.msg_input.addItems(msg_types)
 
     def click_pages(self):
         self.ui.main_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.main_page))

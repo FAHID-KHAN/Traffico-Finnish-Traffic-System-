@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1002</width>
+    <width>1034</width>
     <height>842</height>
    </rect>
   </property>
@@ -448,7 +448,7 @@ QGraphicsView{
                 <number>0</number>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="main_page">
                 <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1298,7 +1298,7 @@ QGraphicsView{
                     </item>
                     <item>
                      <widget class="QWidget" name="results_frame_3" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_12">
+                      <layout class="QVBoxLayout" name="verticalLayout_11">
                        <property name="spacing">
                         <number>0</number>
                        </property>
@@ -1314,6 +1314,17 @@ QGraphicsView{
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
+                       <item>
+                        <widget class="QFrame" name="frame">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_12"/>
+                        </widget>
+                       </item>
                       </layout>
                      </widget>
                     </item>
