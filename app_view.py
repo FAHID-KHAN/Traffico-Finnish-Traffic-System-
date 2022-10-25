@@ -1,6 +1,4 @@
-import sys
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QMainWindow
 from interface import Ui_MainWindow
 
 
@@ -8,12 +6,14 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        # TODO: instantiate controller
+
         # init UI
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
         # add items to combo boxes
-        self.add_items()
+        self.add_combo_items()
 
         # change pages on clicked
         self.click_pages()
@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         # min window size
         # self.setMinimumSize(800, 640)
 
-    def add_items(self):
+    def add_combo_items(self):
         location_items = [
         "-Select-",
         "All",
@@ -31,19 +31,12 @@ class MainWindow(QMainWindow):
         "Autori-kuopio",
         "Paikannin-kuopio",
         ]
-        self.ui.locCombo.addItems(location_items)
-        self.ui.msgCombo.addItems(location_items)
+        self.ui.loc_input.addItems(location_items)
+        self.ui.msg_input.addItems(location_items)
 
     def click_pages(self):
-        self.ui.mainButton.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.mainPage))
+        self.ui.main_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.main_page))
 
-        self.ui.condButton.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.condPage))
+        self.ui.cond_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.cond_page))
 
-        self.ui.msgButton.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.msgPage))
-
-
-if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
+        self.ui.msg_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.msg_page))

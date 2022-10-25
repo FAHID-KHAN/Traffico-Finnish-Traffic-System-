@@ -27,7 +27,7 @@
 	background-color: #f7f7fc;
 }
 
-#leftMenu{
+#nav{
 	background-color: #dedefc;
 }
 
@@ -42,38 +42,38 @@ QPushButton:focus{
 	background-color: #7f7fd7;
 }
 
-#reportButton{
+#main_btn{
 	padding: 10px;
 	text-align: left;
 }
 
-#conditionButton{
+#cond_btn{
 	padding: 10px;
 	text-align: left;
 }
 
-#messageButton{
+#msg_btn{
 	padding: 10px;
 	text-align: left;
 }
 
-#logoButton{
+#logo_btn{
 	background: transparent;
 	background-color: #f7f7fc;
 	text-align: left;
 }
 
-#submitButton{
+#main_submit_btn{
 	background-color: #7f7fd7;
 	border: 2px solid #7f7fd7;
 }
 
-#submitButton_2{
+#cond_submit_btn{
 	background-color: #7f7fd7;
 	border: 2px solid #7f7fd7;
 }
 
-#submitButton_3{
+#msg_submit_btn{
 	background-color: #7f7fd7;
 	border: 2px solid #7f7fd7;
 }
@@ -160,7 +160,7 @@ QGraphicsView{
            <number>10</number>
           </property>
           <item>
-           <widget class="QPushButton" name="logoButton">
+           <widget class="QPushButton" name="logo_btn">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -215,7 +215,7 @@ QGraphicsView{
            <number>0</number>
           </property>
           <item>
-           <widget class="QWidget" name="leftMenu" native="true">
+           <widget class="QWidget" name="nav" native="true">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -242,7 +242,7 @@ QGraphicsView{
               <number>0</number>
              </property>
              <item alignment="Qt::AlignLeft">
-              <widget class="QFrame" name="menuFrame">
+              <widget class="QFrame" name="menu_frame">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -293,7 +293,7 @@ QGraphicsView{
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_7">
                    <property name="spacing">
-                    <number>22</number>
+                    <number>15</number>
                    </property>
                    <property name="leftMargin">
                     <number>5</number>
@@ -308,7 +308,7 @@ QGraphicsView{
                     <number>5</number>
                    </property>
                    <item alignment="Qt::AlignLeft">
-                    <widget class="QPushButton" name="mainButton">
+                    <widget class="QPushButton" name="main_btn">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -343,7 +343,7 @@ QGraphicsView{
                     </widget>
                    </item>
                    <item alignment="Qt::AlignLeft">
-                    <widget class="QPushButton" name="condButton">
+                    <widget class="QPushButton" name="cond_btn">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -372,7 +372,7 @@ QGraphicsView{
                     </widget>
                    </item>
                    <item alignment="Qt::AlignLeft">
-                    <widget class="QPushButton" name="msgButton">
+                    <widget class="QPushButton" name="msg_btn">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -410,7 +410,7 @@ QGraphicsView{
            </widget>
           </item>
           <item>
-           <widget class="QFrame" name="menuPages">
+           <widget class="QFrame" name="pages">
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
             </property>
@@ -450,7 +450,7 @@ QGraphicsView{
                <property name="currentIndex">
                 <number>0</number>
                </property>
-               <widget class="QWidget" name="mainPage">
+               <widget class="QWidget" name="main_page">
                 <layout class="QHBoxLayout" name="horizontalLayout_7">
                  <property name="spacing">
                   <number>0</number>
@@ -468,7 +468,7 @@ QGraphicsView{
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QWidget" name="mianBody" native="true">
+                  <widget class="QWidget" name="page_body" native="true">
                    <layout class="QVBoxLayout" name="verticalLayout_2">
                     <property name="spacing">
                      <number>0</number>
@@ -486,7 +486,7 @@ QGraphicsView{
                      <number>0</number>
                     </property>
                     <item alignment="Qt::AlignTop">
-                     <widget class="QWidget" name="searchFrame" native="true">
+                     <widget class="QWidget" name="search_frame" native="true">
                       <layout class="QVBoxLayout" name="verticalLayout_3">
                        <property name="spacing">
                         <number>15</number>
@@ -504,7 +504,7 @@ QGraphicsView{
                         <number>10</number>
                        </property>
                        <item alignment="Qt::AlignTop">
-                        <widget class="QLabel" name="titleLabel">
+                        <widget class="QLabel" name="title_label">
                          <property name="font">
                           <font>
                            <family>Mulish</family>
@@ -519,7 +519,7 @@ QGraphicsView{
                         </widget>
                        </item>
                        <item>
-                        <layout class="QFormLayout" name="inputForm">
+                        <layout class="QFormLayout" name="input_form">
                          <property name="labelAlignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                          </property>
@@ -545,7 +545,7 @@ QGraphicsView{
                           <number>10</number>
                          </property>
                          <item row="0" column="0">
-                          <widget class="QLabel" name="locLabel">
+                          <widget class="QLabel" name="form_label_1">
                            <property name="font">
                             <font>
                              <family>Mulish</family>
@@ -558,7 +558,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="0" column="1">
-                          <widget class="QComboBox" name="locCombo">
+                          <widget class="QComboBox" name="loc_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -592,7 +592,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="1" column="0">
-                          <widget class="QLabel" name="startLabel">
+                          <widget class="QLabel" name="form_label_2">
                            <property name="font">
                             <font>
                              <pointsize>10</pointsize>
@@ -604,7 +604,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QDateTimeEdit" name="startDateTime">
+                          <widget class="QDateTimeEdit" name="time_start_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -629,7 +629,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="2" column="0">
-                          <widget class="QLabel" name="endLabel">
+                          <widget class="QLabel" name="form_label_3">
                            <property name="font">
                             <font>
                              <family>Mulish</family>
@@ -642,7 +642,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="2" column="1">
-                          <widget class="QDateTimeEdit" name="endDateTime">
+                          <widget class="QDateTimeEdit" name="time_end_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -669,7 +669,7 @@ QGraphicsView{
                         </layout>
                        </item>
                        <item alignment="Qt::AlignTop">
-                        <widget class="QFrame" name="submitFrame">
+                        <widget class="QFrame" name="submit_frame">
                          <property name="frameShape">
                           <enum>QFrame::NoFrame</enum>
                          </property>
@@ -693,7 +693,7 @@ QGraphicsView{
                            <number>10</number>
                           </property>
                           <item>
-                           <widget class="QPushButton" name="submitButton">
+                           <widget class="QPushButton" name="main_submit_btn">
                             <property name="sizePolicy">
                              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                               <horstretch>0</horstretch>
@@ -726,7 +726,7 @@ QGraphicsView{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QWidget" name="resultsFrame" native="true">
+                     <widget class="QWidget" name="results_frame" native="true">
                       <layout class="QHBoxLayout" name="horizontalLayout_5">
                        <property name="spacing">
                         <number>0</number>
@@ -751,7 +751,7 @@ QGraphicsView{
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="condPage">
+               <widget class="QWidget" name="cond_page">
                 <layout class="QHBoxLayout" name="horizontalLayout_10">
                  <property name="spacing">
                   <number>0</number>
@@ -769,7 +769,7 @@ QGraphicsView{
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QWidget" name="condBody" native="true">
+                  <widget class="QWidget" name="page_body_2" native="true">
                    <layout class="QVBoxLayout" name="verticalLayout_4">
                     <property name="spacing">
                      <number>0</number>
@@ -787,7 +787,7 @@ QGraphicsView{
                      <number>0</number>
                     </property>
                     <item alignment="Qt::AlignTop">
-                     <widget class="QWidget" name="searchFrame_2" native="true">
+                     <widget class="QWidget" name="search_frame_2" native="true">
                       <layout class="QVBoxLayout" name="verticalLayout_8">
                        <property name="spacing">
                         <number>10</number>
@@ -805,7 +805,7 @@ QGraphicsView{
                         <number>5</number>
                        </property>
                        <item alignment="Qt::AlignTop">
-                        <widget class="QLabel" name="titleLabel_2">
+                        <widget class="QLabel" name="title_label_2">
                          <property name="font">
                           <font>
                            <family>Mulish</family>
@@ -846,7 +846,7 @@ QGraphicsView{
                           <number>10</number>
                          </property>
                          <item row="0" column="0">
-                          <widget class="QLabel" name="visLabel">
+                          <widget class="QLabel" name="form_label_4">
                            <property name="font">
                             <font>
                              <family>Mulish</family>
@@ -859,7 +859,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="0" column="1">
-                          <widget class="QComboBox" name="visCombo">
+                          <widget class="QComboBox" name="vis_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -887,7 +887,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="1" column="0">
-                          <widget class="QLabel" name="fricLabel">
+                          <widget class="QLabel" name="form_label_5">
                            <property name="font">
                             <font>
                              <pointsize>10</pointsize>
@@ -899,7 +899,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="2" column="0">
-                          <widget class="QLabel" name="slipLabel">
+                          <widget class="QLabel" name="form_label_6">
                            <property name="font">
                             <font>
                              <family>Mulish</family>
@@ -912,7 +912,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QComboBox" name="fricCombo">
+                          <widget class="QComboBox" name="fric_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -940,7 +940,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="2" column="1">
-                          <widget class="QComboBox" name="slipCombo">
+                          <widget class="QComboBox" name="slip_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -968,7 +968,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="3" column="0">
-                          <widget class="QLabel" name="hourLabel">
+                          <widget class="QLabel" name="form_label_7">
                            <property name="font">
                             <font>
                              <family>Mulish</family>
@@ -981,7 +981,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="3" column="1">
-                          <widget class="QComboBox" name="hourCombo">
+                          <widget class="QComboBox" name="hr_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -1011,7 +1011,7 @@ QGraphicsView{
                         </layout>
                        </item>
                        <item alignment="Qt::AlignTop">
-                        <widget class="QFrame" name="submitFrame_2">
+                        <widget class="QFrame" name="submit_frame_2">
                          <property name="frameShape">
                           <enum>QFrame::NoFrame</enum>
                          </property>
@@ -1035,7 +1035,7 @@ QGraphicsView{
                            <number>10</number>
                           </property>
                           <item>
-                           <widget class="QPushButton" name="submitButton_2">
+                           <widget class="QPushButton" name="cond_submit_btn">
                             <property name="sizePolicy">
                              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                               <horstretch>0</horstretch>
@@ -1068,7 +1068,7 @@ QGraphicsView{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QWidget" name="resultsFrame_2" native="true">
+                     <widget class="QWidget" name="results_frame_2" native="true">
                       <layout class="QHBoxLayout" name="horizontalLayout_9">
                        <property name="spacing">
                         <number>0</number>
@@ -1093,7 +1093,7 @@ QGraphicsView{
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="msgPage">
+               <widget class="QWidget" name="msg_page">
                 <layout class="QHBoxLayout" name="horizontalLayout_13">
                  <property name="spacing">
                   <number>0</number>
@@ -1111,7 +1111,7 @@ QGraphicsView{
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QWidget" name="msgBody" native="true">
+                  <widget class="QWidget" name="page_body_3" native="true">
                    <layout class="QVBoxLayout" name="verticalLayout_9">
                     <property name="spacing">
                      <number>0</number>
@@ -1129,7 +1129,7 @@ QGraphicsView{
                      <number>0</number>
                     </property>
                     <item alignment="Qt::AlignTop">
-                     <widget class="QWidget" name="searchFrame_3" native="true">
+                     <widget class="QWidget" name="search_frame_3" native="true">
                       <layout class="QVBoxLayout" name="verticalLayout_10">
                        <property name="spacing">
                         <number>20</number>
@@ -1147,7 +1147,7 @@ QGraphicsView{
                         <number>10</number>
                        </property>
                        <item alignment="Qt::AlignTop">
-                        <widget class="QLabel" name="titleLabel_3">
+                        <widget class="QLabel" name="title_label_3">
                          <property name="font">
                           <font>
                            <family>Mulish</family>
@@ -1162,7 +1162,7 @@ QGraphicsView{
                         </widget>
                        </item>
                        <item>
-                        <layout class="QFormLayout" name="inputForm_3">
+                        <layout class="QFormLayout" name="input_form_3">
                          <property name="labelAlignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                          </property>
@@ -1188,7 +1188,7 @@ QGraphicsView{
                           <number>10</number>
                          </property>
                          <item row="0" column="0">
-                          <widget class="QLabel" name="msgLabel">
+                          <widget class="QLabel" name="form_label_8">
                            <property name="font">
                             <font>
                              <family>Mulish</family>
@@ -1201,7 +1201,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="0" column="1">
-                          <widget class="QComboBox" name="msgCombo">
+                          <widget class="QComboBox" name="msg_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -1237,7 +1237,7 @@ QGraphicsView{
                         </layout>
                        </item>
                        <item alignment="Qt::AlignTop">
-                        <widget class="QFrame" name="submitFrame_3">
+                        <widget class="QFrame" name="submit_frame_3">
                          <property name="frameShape">
                           <enum>QFrame::NoFrame</enum>
                          </property>
@@ -1264,7 +1264,7 @@ QGraphicsView{
                            <number>10</number>
                           </property>
                           <item>
-                           <widget class="QPushButton" name="submitButton_3">
+                           <widget class="QPushButton" name="msg_submit_btn">
                             <property name="sizePolicy">
                              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                               <horstretch>0</horstretch>
@@ -1297,7 +1297,7 @@ QGraphicsView{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QWidget" name="resultsFrame_3" native="true">
+                     <widget class="QWidget" name="results_frame_3" native="true">
                       <layout class="QHBoxLayout" name="horizontalLayout_12">
                        <property name="spacing">
                         <number>0</number>
