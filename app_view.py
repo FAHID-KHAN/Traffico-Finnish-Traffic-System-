@@ -23,20 +23,20 @@ class MainWindow(QMainWindow):
 
     def add_combo_items(self):
         location_items = [
-        "-Select-",
-        "All",
-        "Municipalities",
-        "State-roads",
-        "Autori-oulu",
-        "Autori-kuopio",
-        "Paikannin-kuopio",
-        ]
+            "-Select-",
+            "All",
+            "Municipalities",
+            "State-roads",
+            "Autori-oulu",
+            "Autori-kuopio",
+            "Paikannin-kuopio",
+            ]
         self.ui.loc_input.addItems(location_items)
         self.ui.msg_input.addItems(location_items)
 
     def click_pages(self):
-        self.ui.main_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.main_page))
+        self.ui.main_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.main_page))
 
-        self.ui.cond_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.cond_page))
+        self.ui.cond_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.cond_page))
 
-        self.ui.msg_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.msg_page))
+        self.ui.msg_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.msg_page))

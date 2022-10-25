@@ -42,22 +42,22 @@ QPushButton:focus{
 	background-color: #7f7fd7;
 }
 
-#main_btn{
+#main_button{
 	padding: 10px;
 	text-align: left;
 }
 
-#cond_btn{
+#cond_button{
 	padding: 10px;
 	text-align: left;
 }
 
-#msg_btn{
+#msg_button{
 	padding: 10px;
 	text-align: left;
 }
 
-#logo_btn{
+#logo_button{
 	background: transparent;
 	background-color: #f7f7fc;
 	text-align: left;
@@ -160,7 +160,7 @@ QGraphicsView{
            <number>10</number>
           </property>
           <item>
-           <widget class="QPushButton" name="logo_btn">
+           <widget class="QPushButton" name="logo_button">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -242,7 +242,7 @@ QGraphicsView{
               <number>0</number>
              </property>
              <item alignment="Qt::AlignLeft">
-              <widget class="QFrame" name="menu_frame">
+              <widget class="QFrame" name="nav_frame">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -275,7 +275,7 @@ QGraphicsView{
                  <number>10</number>
                 </property>
                 <item alignment="Qt::AlignLeft|Qt::AlignTop">
-                 <widget class="QFrame" name="frame">
+                 <widget class="QFrame" name="buttons_frame">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                     <horstretch>0</horstretch>
@@ -308,7 +308,7 @@ QGraphicsView{
                     <number>5</number>
                    </property>
                    <item alignment="Qt::AlignLeft">
-                    <widget class="QPushButton" name="main_btn">
+                    <widget class="QPushButton" name="main_button">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -343,7 +343,7 @@ QGraphicsView{
                     </widget>
                    </item>
                    <item alignment="Qt::AlignLeft">
-                    <widget class="QPushButton" name="cond_btn">
+                    <widget class="QPushButton" name="cond_button">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -372,7 +372,7 @@ QGraphicsView{
                     </widget>
                    </item>
                    <item alignment="Qt::AlignLeft">
-                    <widget class="QPushButton" name="msg_btn">
+                    <widget class="QPushButton" name="msg_button">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -437,7 +437,7 @@ QGraphicsView{
               <number>0</number>
              </property>
              <item>
-              <widget class="QStackedWidget" name="stackedWidget">
+              <widget class="QStackedWidget" name="stacked_widget">
                <property name="font">
                 <font>
                  <family>Mulish</family>
@@ -448,7 +448,7 @@ QGraphicsView{
                 <number>0</number>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>2</number>
                </property>
                <widget class="QWidget" name="main_page">
                 <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -604,7 +604,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QDateTimeEdit" name="time_start_input">
+                          <widget class="QDateTimeEdit" name="start_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -642,7 +642,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="2" column="1">
-                          <widget class="QDateTimeEdit" name="time_end_input">
+                          <widget class="QDateTimeEdit" name="end_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                              <horstretch>0</horstretch>
