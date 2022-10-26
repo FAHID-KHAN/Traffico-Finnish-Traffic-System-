@@ -743,6 +743,15 @@ QGraphicsView{
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
+                       <item>
+                        <widget class="QStackedWidget" name="stacked_widget_1">
+                         <property name="currentIndex">
+                          <number>0</number>
+                         </property>
+                         <widget class="QWidget" name="blank_page_1"/>
+                         <widget class="QWidget" name="results_page_1"/>
+                        </widget>
+                       </item>
                       </layout>
                      </widget>
                     </item>
@@ -846,20 +855,19 @@ QGraphicsView{
                           <number>10</number>
                          </property>
                          <item row="0" column="0">
-                          <widget class="QLabel" name="form_label_4">
+                          <widget class="QLabel" name="form_label_5">
                            <property name="font">
                             <font>
-                             <family>Mulish</family>
                              <pointsize>10</pointsize>
                             </font>
                            </property>
                            <property name="text">
-                            <string>Visibility Condition</string>
+                            <string>Precipitation</string>
                            </property>
                           </widget>
                          </item>
                          <item row="0" column="1">
-                          <widget class="QComboBox" name="vis_input">
+                          <widget class="QComboBox" name="prec_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -887,18 +895,6 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="1" column="0">
-                          <widget class="QLabel" name="form_label_5">
-                           <property name="font">
-                            <font>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
-                           <property name="text">
-                            <string>Friction Condition</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="2" column="0">
                           <widget class="QLabel" name="form_label_6">
                            <property name="font">
                             <font>
@@ -912,34 +908,6 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QComboBox" name="fric_input">
-                           <property name="sizePolicy">
-                            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                             <horstretch>0</horstretch>
-                             <verstretch>0</verstretch>
-                            </sizepolicy>
-                           </property>
-                           <property name="minimumSize">
-                            <size>
-                             <width>0</width>
-                             <height>30</height>
-                            </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>Mulish</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
-                           <property name="focusPolicy">
-                            <enum>Qt::WheelFocus</enum>
-                           </property>
-                           <property name="editable">
-                            <bool>true</bool>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="2" column="1">
                           <widget class="QComboBox" name="slip_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
@@ -967,7 +935,7 @@ QGraphicsView{
                            </property>
                           </widget>
                          </item>
-                         <item row="3" column="0">
+                         <item row="2" column="0">
                           <widget class="QLabel" name="form_label_7">
                            <property name="font">
                             <font>
@@ -980,7 +948,7 @@ QGraphicsView{
                            </property>
                           </widget>
                          </item>
-                         <item row="3" column="1">
+                         <item row="2" column="1">
                           <widget class="QComboBox" name="hr_input">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
@@ -1085,6 +1053,12 @@ QGraphicsView{
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
+                       <item>
+                        <widget class="QStackedWidget" name="stacked_widget_2">
+                         <widget class="QWidget" name="blank_page_2"/>
+                         <widget class="QWidget" name="results_page_2"/>
+                        </widget>
+                       </item>
                       </layout>
                      </widget>
                     </item>
@@ -1322,7 +1296,17 @@ QGraphicsView{
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <layout class="QHBoxLayout" name="horizontalLayout_12"/>
+                         <layout class="QHBoxLayout" name="horizontalLayout_12">
+                          <item>
+                           <widget class="QStackedWidget" name="stacked_widget_3">
+                            <property name="currentIndex">
+                             <number>0</number>
+                            </property>
+                            <widget class="QWidget" name="blank_page_3"/>
+                            <widget class="QWidget" name="results_page_3"/>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                       </layout>

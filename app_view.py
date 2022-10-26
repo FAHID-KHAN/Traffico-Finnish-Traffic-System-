@@ -18,7 +18,9 @@ class MainWindow(QMainWindow):
         self.click_pages()
 
         # Send signals to the controller
-        self.ui.msg_submit_btn.clicked.connect(self.controller.submit_message)
+        self.ui.main_submit_btn.clicked.connect(self.controller.submit_tasks)
+        self.ui.cond_submit_btn.clicked.connect(self.controller.submit_conditions)
+        self.ui.msg_submit_btn.clicked.connect(self.controller.submit_messages)
 
         # min window size
         # self.setMinimumSize(800, 640)
