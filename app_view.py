@@ -51,3 +51,18 @@ class MainWindow(QMainWindow):
         self.ui.cond_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.cond_page))
 
         self.ui.msg_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.msg_page))
+
+    def update_tasks_widget(self, data):
+        print(data)
+
+    def update_conditions_widget(self, data):
+        print(data)
+        self.ui.data_label_1.setText(str(data["roadTemperature"]))
+        self.ui.data_label_2.setText(str(data["temperature"]))
+        self.ui.data_label_3.setText(str(data["windSpeed"]))
+        self.ui.data_label_4.setText(str(data["windDirection"]))
+        self.ui.data_label_5.setText(str(data["type"]))
+        self.ui.data_label_6.setText(str(data["reliability"]))
+
+    def update_messages_widget(self, data):
+        print(data)

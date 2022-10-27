@@ -15,18 +15,18 @@ class Controller:
     def submit_tasks(self):
         self._model.get_tasks_data()
         self._view.ui.stacked_widget_1.setCurrentIndex(1)
-        print(self._model.tasks_data)
+        self._view.update_tasks_widget(self._model.tasks_data)
 
     def submit_conditions(self):
         self._model.get_conditions_data()
         self._view.ui.stacked_widget_2.setCurrentIndex(1)
-        print(self._model.conditions_data)
+        self._view.update_conditions_widget(self._model.conditions_data)
 
     def submit_messages(self):
         self._model.get_message_data(self._view.ui.msg_input.currentText())
         self._view.ui.msg_input.setCurrentIndex(0)
         self._view.ui.stacked_widget_3.setCurrentIndex(1)
-        print(self._model.message_data)
+        self._view.update_messages_widget(self._model.message_data)
 
     def run(self):
         self._view.show()

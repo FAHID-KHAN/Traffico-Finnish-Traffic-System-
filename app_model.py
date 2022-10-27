@@ -4,7 +4,7 @@ import json
 class Model:
     def __init__(self):
         self.tasks_data = []
-        self.conditions_data = []
+        self.conditions_data = {}
         self.message_data = []
 
     def get_tasks_data(self):
@@ -24,7 +24,7 @@ class Model:
         data = json.loads(res.text)
 
         # TODO: Parse the road conditions data
-        self.conditions_data.append(data['weatherData'][0]['roadConditions'][0])
+        self.conditions_data = data["weatherData"][0]["roadConditions"][0]
 
     def get_message_data(self, type):
         url = "https://tie.digitraffic.fi/api/traffic-message/v1/messages"
