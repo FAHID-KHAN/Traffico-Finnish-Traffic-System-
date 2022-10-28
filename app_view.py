@@ -42,7 +42,7 @@ class MainWindow(QMainWindow):
             "WEIGHT_RESTRICTION",
             "ROAD_WORK",
             ]
-        self.ui.loc_input.addItems(locations)
+        self.ui.main_input_1.addItems(locations)
         self.ui.msg_input.addItems(msg_types)
 
     def click_pages(self):
@@ -55,14 +55,40 @@ class MainWindow(QMainWindow):
     def update_tasks_widget(self, data):
         print(data)
 
+        # reset input form
+        self.ui.main_input_1.setCurrentIndex(0)
+
+        # TODO: update results data
+
+        # show results page
+        self.ui.stacked_widget_1.setCurrentIndex(1)
+
     def update_conditions_widget(self, data):
         print(data)
-        self.ui.data_label_1.setText(str(data["roadTemperature"]))
-        self.ui.data_label_2.setText(str(data["temperature"]))
-        self.ui.data_label_3.setText(str(data["windSpeed"]))
-        self.ui.data_label_4.setText(str(data["windDirection"]))
-        self.ui.data_label_5.setText(str(data["type"]))
-        self.ui.data_label_6.setText(str(data["reliability"]))
+
+        # reset input form
+        self.ui.cond_input_1.setCurrentIndex(0)
+        self.ui.cond_input_2.setCurrentIndex(0)
+        self.ui.cond_input_3.setCurrentIndex(0)
+
+        # update results data
+        self.ui.cond_data_1.setText(str(data["roadTemperature"]))
+        self.ui.cond_data_2.setText(str(data["temperature"]))
+        self.ui.cond_data_3.setText(str(data["windSpeed"]))
+        self.ui.cond_data_4.setText(str(data["windDirection"]))
+        self.ui.cond_data_5.setText(str(data["type"]))
+        self.ui.cond_data_6.setText(str(data["reliability"]))
+
+        # show results page
+        self.ui.stacked_widget_2.setCurrentIndex(1)
 
     def update_messages_widget(self, data):
         print(data)
+
+        # reset input form
+        self.ui.msg_input.setCurrentIndex(0)
+
+        # TODO: update results data
+
+        # show results page
+        self.ui.stacked_widget_3.setCurrentIndex(1)

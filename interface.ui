@@ -315,7 +315,7 @@ QDateTimeEdit{
                      </property>
                      <property name="icon">
                       <iconset resource="resources.qrc">
-                       <normaloff>:/roadIcons/assets/icons/chart-column-solid.svg</normaloff>:/roadIcons/assets/icons/chart-column-solid.svg</iconset>
+                       <normaloff>:/roadIcons/assets/icons/chart-simple-solid.svg</normaloff>:/roadIcons/assets/icons/chart-simple-solid.svg</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -541,7 +541,7 @@ QDateTimeEdit{
                           </widget>
                          </item>
                          <item row="0" column="1">
-                          <widget class="QComboBox" name="loc_input">
+                          <widget class="QComboBox" name="main_input_1">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -587,7 +587,7 @@ QDateTimeEdit{
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QDateTimeEdit" name="start_input">
+                          <widget class="QDateTimeEdit" name="main_input_2">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -625,7 +625,7 @@ QDateTimeEdit{
                           </widget>
                          </item>
                          <item row="2" column="1">
-                          <widget class="QDateTimeEdit" name="end_input">
+                          <widget class="QDateTimeEdit" name="main_input_3">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -850,7 +850,7 @@ QDateTimeEdit{
                           </widget>
                          </item>
                          <item row="0" column="1">
-                          <widget class="QComboBox" name="prec_input">
+                          <widget class="QComboBox" name="cond_input_1">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -891,7 +891,7 @@ QDateTimeEdit{
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QComboBox" name="slip_input">
+                          <widget class="QComboBox" name="cond_input_2">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -932,7 +932,7 @@ QDateTimeEdit{
                           </widget>
                          </item>
                          <item row="2" column="1">
-                          <widget class="QComboBox" name="hr_input">
+                          <widget class="QComboBox" name="cond_input_3">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -1126,7 +1126,7 @@ QDateTimeEdit{
                                   </widget>
                                  </item>
                                  <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-                                  <widget class="QLabel" name="data_label_1">
+                                  <widget class="QLabel" name="cond_data_1">
                                    <property name="font">
                                     <font>
                                      <family>Mulish</family>
@@ -1192,7 +1192,7 @@ QDateTimeEdit{
                                   </widget>
                                  </item>
                                  <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-                                  <widget class="QLabel" name="data_label_2">
+                                  <widget class="QLabel" name="cond_data_2">
                                    <property name="font">
                                     <font>
                                      <family>Mulish</family>
@@ -1258,7 +1258,7 @@ QDateTimeEdit{
                                   </widget>
                                  </item>
                                  <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-                                  <widget class="QLabel" name="data_label_5">
+                                  <widget class="QLabel" name="cond_data_5">
                                    <property name="font">
                                     <font>
                                      <family>Mulish</family>
@@ -1324,7 +1324,7 @@ QDateTimeEdit{
                                   </widget>
                                  </item>
                                  <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-                                  <widget class="QLabel" name="data_label_3">
+                                  <widget class="QLabel" name="cond_data_3">
                                    <property name="font">
                                     <font>
                                      <family>Mulish</family>
@@ -1390,7 +1390,7 @@ QDateTimeEdit{
                                   </widget>
                                  </item>
                                  <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-                                  <widget class="QLabel" name="data_label_6">
+                                  <widget class="QLabel" name="cond_data_6">
                                    <property name="font">
                                     <font>
                                      <family>Mulish</family>
@@ -1456,7 +1456,7 @@ QDateTimeEdit{
                                   </widget>
                                  </item>
                                  <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-                                  <widget class="QLabel" name="data_label_4">
+                                  <widget class="QLabel" name="cond_data_4">
                                    <property name="font">
                                     <font>
                                      <family>Mulish</family>
