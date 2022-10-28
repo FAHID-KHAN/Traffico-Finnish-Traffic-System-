@@ -37,8 +37,9 @@ class MainWindow(QMainWindow):
 
     def get_conditions_input(self):
         inputs = {}
-        inputs["precipitation"] = self.ui.cond_input_1.currentText()
-        inputs["slipperiness"] = self.ui.cond_input_2.currentText()
+        inputs["location"] = self.ui.cond_input_1.currentText()
+        inputs["precipitation"] = self.ui.cond_input_2.currentText()
+        inputs["slipperiness"] = self.ui.cond_input_3.currentText()
         return inputs
 
     def get_messages_input(self):

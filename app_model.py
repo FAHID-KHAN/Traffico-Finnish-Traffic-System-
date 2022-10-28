@@ -8,16 +8,25 @@ class Model:
         self.conditions_data = {}
         self.message_data = []
 
+        # hard coded co-ordinates: xMin, yMin, xMax, yMax
+        self.coordinates = {
+            "Helsinki": (24, 60, 26, 61),
+            "Kuopio": (27, 62, 28, 64),
+            "Oulu": (24, 64, 26, 66),
+            "Pori": (21, 61, 22, 62),
+            "Tampere": (23, 61, 24, 62),
+        }
+
     def get_tasks_data(self, inputs):
         url = "https://tie.digitraffic.fi/api/maintenance/v1/tracking/routes"
         params = {
             "endFrom": quote(inputs["end_time"]),
             "endBefore": quote(inputs["start_time"]),
+            "xMin": self.coordinates[inputs["location"]][0],
+            "yMin": self.coordinates[inputs["location"]][1],
+            "xMax": self.coordinates[inputs["location"]][2],
+            "yMax": self.coordinates[inputs["location"]][3],
             "domain": "state-roads",
-            "xMin": 21,
-            "yMin": 61,
-            "xMax": 22,
-            "yMax": 62,
             "taskId": "",
         }
         # join parameters with the api endpoint
@@ -42,13 +51,18 @@ class Model:
 
     def get_conditions_data(self, inputs):
         url = "https://tie.digitraffic.fi/api/v3/data/road-conditions"
-        params = "/21/61/22/62"
-        url += params
+        # join parameters with the api endpoint
+        url += "/" + "/".join(list(map(
+            str, self.coordinates[inputs["location"]]
+        )))
         res = requests.get(url=url)
         data = json.loads(res.text)
 
         # TODO: parse the road conditions data
-        self.conditions_data = data["weatherData"][0]["roadConditions"][0]
+        try:
+            self.conditions_data = data["weatherData"][0]["roadConditions"][0]
+        except:
+            self.conditions_data = {}
 
         return self.conditions_data
 

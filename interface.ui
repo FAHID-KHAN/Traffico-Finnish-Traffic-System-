@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1047</width>
-    <height>762</height>
+    <height>748</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -551,7 +551,7 @@ QDateTimeEdit {
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -574,32 +574,27 @@ QDateTimeEdit {
                            </property>
                            <item>
                             <property name="text">
-                             <string>All</string>
+                             <string>Helsinki</string>
                             </property>
                            </item>
                            <item>
                             <property name="text">
-                             <string>Municipalities</string>
+                             <string>Kuopio</string>
                             </property>
                            </item>
                            <item>
                             <property name="text">
-                             <string>State-roads</string>
+                             <string>Oulu</string>
                             </property>
                            </item>
                            <item>
                             <property name="text">
-                             <string>Autori-oulu</string>
+                             <string>Pori</string>
                             </property>
                            </item>
                            <item>
                             <property name="text">
-                             <string>Autori-kuopio</string>
-                            </property>
-                           </item>
-                           <item>
-                            <property name="text">
-                             <string>Paikannin-kuopio</string>
+                             <string>Tampere</string>
                             </property>
                            </item>
                           </widget>
@@ -627,7 +622,7 @@ QDateTimeEdit {
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -675,7 +670,7 @@ QDateTimeEdit {
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -736,7 +731,7 @@ QDateTimeEdit {
                             <property name="minimumSize">
                              <size>
                               <width>120</width>
-                              <height>30</height>
+                              <height>34</height>
                              </size>
                             </property>
                             <property name="font">
@@ -873,21 +868,21 @@ QDateTimeEdit {
                           <number>10</number>
                          </property>
                          <property name="verticalSpacing">
-                          <number>20</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="topMargin">
-                          <number>10</number>
+                          <number>5</number>
                          </property>
                          <property name="rightMargin">
-                          <number>15</number>
-                         </property>
-                         <property name="bottomMargin">
                           <number>10</number>
                          </property>
-                         <item row="0" column="0">
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="1" column="0">
                           <widget class="QLabel" name="form_label_5">
                            <property name="font">
                             <font>
@@ -896,47 +891,6 @@ QDateTimeEdit {
                            </property>
                            <property name="text">
                             <string>Precipitation</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="0" column="1">
-                          <widget class="QComboBox" name="cond_input_1">
-                           <property name="sizePolicy">
-                            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                             <horstretch>0</horstretch>
-                             <verstretch>0</verstretch>
-                            </sizepolicy>
-                           </property>
-                           <property name="minimumSize">
-                            <size>
-                             <width>0</width>
-                             <height>30</height>
-                            </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>Mulish</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
-                           <property name="focusPolicy">
-                            <enum>Qt::WheelFocus</enum>
-                           </property>
-                           <property name="editable">
-                            <bool>true</bool>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="1" column="0">
-                          <widget class="QLabel" name="form_label_6">
-                           <property name="font">
-                            <font>
-                             <family>Mulish</family>
-                             <pointsize>11</pointsize>
-                            </font>
-                           </property>
-                           <property name="text">
-                            <string>Winter Slipperiness</string>
                            </property>
                           </widget>
                          </item>
@@ -951,7 +905,7 @@ QDateTimeEdit {
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -969,6 +923,47 @@ QDateTimeEdit {
                           </widget>
                          </item>
                          <item row="2" column="0">
+                          <widget class="QLabel" name="form_label_6">
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>11</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Winter Slipperiness</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QComboBox" name="cond_input_3">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>34</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="focusPolicy">
+                            <enum>Qt::WheelFocus</enum>
+                           </property>
+                           <property name="editable">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="0">
                           <widget class="QLabel" name="form_label_7">
                            <property name="font">
                             <font>
@@ -981,7 +976,7 @@ QDateTimeEdit {
                            </property>
                           </widget>
                          </item>
-                         <item row="2" column="1">
+                         <item row="3" column="1">
                           <widget class="QFrame" name="frame">
                            <layout class="QHBoxLayout" name="horizontalLayout_15">
                             <property name="spacing">
@@ -1075,6 +1070,78 @@ QDateTimeEdit {
                            </layout>
                           </widget>
                          </item>
+                         <item row="0" column="0">
+                          <widget class="QLabel" name="form_label_4">
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>11</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Location</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QComboBox" name="cond_input_1">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>34</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="focusPolicy">
+                            <enum>Qt::WheelFocus</enum>
+                           </property>
+                           <property name="editable">
+                            <bool>false</bool>
+                           </property>
+                           <property name="insertPolicy">
+                            <enum>QComboBox::NoInsert</enum>
+                           </property>
+                           <property name="sizeAdjustPolicy">
+                            <enum>QComboBox::AdjustToContents</enum>
+                           </property>
+                           <item>
+                            <property name="text">
+                             <string>Helsinki</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Kuopio</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Oulu</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Pori</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Tampere</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
                         </layout>
                        </item>
                        <item alignment="Qt::AlignTop">
@@ -1112,7 +1179,7 @@ QDateTimeEdit {
                             <property name="minimumSize">
                              <size>
                               <width>120</width>
-                              <height>30</height>
+                              <height>34</height>
                              </size>
                             </property>
                             <property name="font">
@@ -1722,7 +1789,7 @@ QDateTimeEdit {
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -1805,7 +1872,7 @@ QDateTimeEdit {
                             <property name="minimumSize">
                              <size>
                               <width>120</width>
-                              <height>30</height>
+                              <height>34</height>
                              </size>
                             </property>
                             <property name="font">
