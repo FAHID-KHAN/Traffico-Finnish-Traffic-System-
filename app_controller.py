@@ -13,23 +13,23 @@ class Controller:
         # TODO: add external style sheet
         # with open("assets/style.css","r") as f:
         #     self._app.setStyleSheet(f.read())
-        
+
         self._model = Model()
         self._view = MainWindow(self)
 
     def submit_tasks(self):
-        input = self._view.get_tasks_input()
-        data = self._model.get_tasks_data(input)
+        inputs = self._view.get_tasks_input()
+        data = self._model.get_tasks_data(inputs)
         self._view.update_tasks_widget(data)
 
     def submit_conditions(self):
-        input = self._view.get_conditions_input()
-        data = self._model.get_conditions_data(input)
+        inputs = self._view.get_conditions_input()
+        data = self._model.get_conditions_data(inputs)
         self._view.update_conditions_widget(data)
 
     def submit_messages(self):
-        input = self._view.get_messages_input()
-        data = self._model.get_messages_data(input)
+        type = self._view.get_messages_input()
+        data = self._model.get_messages_data(type)
         self._view.update_messages_widget(data)
 
     def run(self):

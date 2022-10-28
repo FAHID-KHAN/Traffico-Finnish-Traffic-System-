@@ -636,6 +636,16 @@ QDateTimeEdit {
                              <pointsize>10</pointsize>
                             </font>
                            </property>
+                           <property name="dateTime">
+                            <datetime>
+                             <hour>9</hour>
+                             <minute>0</minute>
+                             <second>0</second>
+                             <year>2022</year>
+                             <month>1</month>
+                             <day>19</day>
+                            </datetime>
+                           </property>
                            <property name="calendarPopup">
                             <bool>true</bool>
                            </property>
@@ -673,6 +683,16 @@ QDateTimeEdit {
                              <family>Mulish</family>
                              <pointsize>10</pointsize>
                             </font>
+                           </property>
+                           <property name="dateTime">
+                            <datetime>
+                             <hour>2</hour>
+                             <minute>0</minute>
+                             <second>0</second>
+                             <year>2022</year>
+                             <month>1</month>
+                             <day>19</day>
+                            </datetime>
                            </property>
                            <property name="calendarPopup">
                             <bool>true</bool>

@@ -28,10 +28,18 @@ class MainWindow(QMainWindow):
         self.ui.msg_submit_btn.clicked.connect(self.controller.submit_messages)
 
     def get_tasks_input(self):
-        return
+        inputs = {}
+        utc = "yyyy-MM-ddThh:mm:ssZ"
+        inputs["location"] = self.ui.main_input_1.currentText()
+        inputs["start_time"] = self.ui.main_input_2.dateTime().toString(utc)
+        inputs["end_time"] = self.ui.main_input_3.dateTime().toString(utc)
+        return inputs
 
     def get_conditions_input(self):
-        return
+        inputs = {}
+        inputs["precipitation"] = self.ui.cond_input_1.currentText()
+        inputs["slipperiness"] = self.ui.cond_input_2.currentText()
+        return inputs
 
     def get_messages_input(self):
         return self.ui.msg_input.currentText()
