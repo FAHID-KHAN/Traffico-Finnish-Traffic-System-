@@ -3,20 +3,22 @@ import json
 
 class Model:
     def __init__(self):
-        self.tasks_data = []
+        self.tasks_data = {}
         self.conditions_data = {}
         self.message_data = []
 
-    def get_tasks_data(self):
+    def get_tasks_data(self, input):
         url = "https://tie.digitraffic.fi/api/maintenance/v1/tracking/tasks"
         params = {}
         res = requests.get(url=url, params=params)
         data = json.loads(res.text)
 
         # TODO: parse the road maintenance data
-        self.tasks_data.append(data[0])
+        self.tasks_data = data[0]
 
-    def get_conditions_data(self):
+        return self.tasks_data
+
+    def get_conditions_data(self, input):
         url = "https://tie.digitraffic.fi/api/v3/data/road-conditions"
         params = "/21/61/22/62"
         url += params
@@ -26,7 +28,9 @@ class Model:
         # TODO: parse the road conditions data
         self.conditions_data = data["weatherData"][0]["roadConditions"][0]
 
-    def get_message_data(self, type):
+        return self.conditions_data
+
+    def get_messages_data(self, type):
         url = "https://tie.digitraffic.fi/api/traffic-message/v1/messages"
         params = {
             "situationType": type,
@@ -57,3 +61,5 @@ class Model:
             except:
                 row['description'] = None
             self.message_data.append(row)
+
+        return self.message_data

@@ -13,16 +13,19 @@ class Controller:
         self._view = MainWindow(self)
 
     def submit_tasks(self):
-        self._model.get_tasks_data()
-        self._view.update_tasks_widget(self._model.tasks_data)
+        input = self._view.get_tasks_input()
+        data = self._model.get_tasks_data(input)
+        self._view.update_tasks_widget(data)
 
     def submit_conditions(self):
-        self._model.get_conditions_data()
-        self._view.update_conditions_widget(self._model.conditions_data)
+        input = self._view.get_conditions_input()
+        data = self._model.get_conditions_data(input)
+        self._view.update_conditions_widget(data)
 
     def submit_messages(self):
-        self._model.get_message_data(self._view.ui.msg_input.currentText())
-        self._view.update_messages_widget(self._model.message_data)
+        input = self._view.get_messages_input()
+        data = self._model.get_messages_data(input)
+        self._view.update_messages_widget(data)
 
     def run(self):
         self._view.show()

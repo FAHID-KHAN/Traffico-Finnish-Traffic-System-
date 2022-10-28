@@ -27,6 +27,15 @@ class MainWindow(QMainWindow):
         self.ui.cond_submit_btn.clicked.connect(self.controller.submit_conditions)
         self.ui.msg_submit_btn.clicked.connect(self.controller.submit_messages)
 
+    def get_tasks_input(self):
+        return
+
+    def get_conditions_input(self):
+        return
+
+    def get_messages_input(self):
+        return self.ui.msg_input.currentText()
+
     def update_tasks_widget(self, data):
         print(data)
 
