@@ -15,50 +15,50 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">*{
+    <string notr="true">* {
 	color: #000;
 }
 
-#centralwidget{
+#centralwidget {
 	background-color: #fff;
 }
 
-#head{
+#head {
 	background-color: #f7f7fc;
 }
 
-#nav{
+#nav {
 	background-color: #dedefc;
 }
 
-QPushButton{
+QPushButton {
 	background: transparent;
 	border: none;
 	border-radius: 5px;
 	padding: 5px;
 }
 
-QPushButton:focus{
+QPushButton:focus {
 	background-color: #7f7fd7;
 }
 
-#main_button, #cond_button, #msg_button{
+#main_button, #cond_button, #msg_button {
 	padding: 10px;
 	text-align: left;
 }
 
-#logo_button{
+#logo_button {
 	background: transparent;
 	background-color: #f7f7fc;
 	text-align: left;
 }
 
-#main_submit_btn, #cond_submit_btn, #msg_submit_btn{
+#main_submit_btn, #cond_submit_btn, #msg_submit_btn {
 	background-color: #7f7fd7;
 	border: 2px solid #7f7fd7;
 }
 
-/*#searchFrmae{
+/*#searchFrmae {
 	background-color: #eeeeff;
 }*/
 
@@ -66,23 +66,23 @@ QLabel {
 	padding: 5px;
 }
 
-QComboBox{
+QComboBox {
 	border: 2px solid #7f7fd7;
 	border-radius: 5px;
 	padding: 5px;
 }
 
-QDateTimeEdit{
+QDateTimeEdit {
 	border: 2px solid #7f7fd7;
 	border-radius: 5px;
 	padding: 5px;
 }
 
-/*#resultsFrame{
+/*#resultsFrame {
 	background-color: #eeeeff;
 }*/
 
-#style_frame_1, #style_frame_2, #style_frame_3, #style_frame_4, #style_frame_5, #style_frame_6{
+#style_frame_1, #style_frame_2, #style_frame_3, #style_frame_4, #style_frame_5, #style_frame_6 {
 	background-color: #cac4f2;
 	border: 2px solid #000;
 	border-radius: 20px;
@@ -163,7 +163,7 @@ QDateTimeEdit{
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/roadIcons/assets/icons/traffic-light-solid.svg</normaloff>:/roadIcons/assets/icons/traffic-light-solid.svg</iconset>
+              <normaloff>:/icons/assets/icons/traffic-light-solid.svg</normaloff>:/icons/assets/icons/traffic-light-solid.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -315,7 +315,7 @@ QDateTimeEdit{
                      </property>
                      <property name="icon">
                       <iconset resource="resources.qrc">
-                       <normaloff>:/roadIcons/assets/icons/chart-simple-solid.svg</normaloff>:/roadIcons/assets/icons/chart-simple-solid.svg</iconset>
+                       <normaloff>:/icons/assets/icons/chart-simple-solid.svg</normaloff>:/icons/assets/icons/chart-simple-solid.svg</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -340,11 +340,11 @@ QDateTimeEdit{
                       </font>
                      </property>
                      <property name="text">
-                      <string>   Road Conditions      </string>
+                      <string>   Road Conditions     </string>
                      </property>
                      <property name="icon">
                       <iconset resource="resources.qrc">
-                       <normaloff>:/roadIcons/assets/icons/triangle-exclamation-solid.svg</normaloff>:/roadIcons/assets/icons/triangle-exclamation-solid.svg</iconset>
+                       <normaloff>:/icons/assets/icons/triangle-exclamation-solid.svg</normaloff>:/icons/assets/icons/triangle-exclamation-solid.svg</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -369,11 +369,11 @@ QDateTimeEdit{
                       </font>
                      </property>
                      <property name="text">
-                      <string>   Traffic Messages      </string>
+                      <string>   Traffic Messages     </string>
                      </property>
                      <property name="icon">
                       <iconset resource="resources.qrc">
-                       <normaloff>:/roadIcons/assets/icons/envelope-solid.svg</normaloff>:/roadIcons/assets/icons/envelope-solid.svg</iconset>
+                       <normaloff>:/icons/assets/icons/envelope-solid.svg</normaloff>:/icons/assets/icons/envelope-solid.svg</iconset>
                      </property>
                      <property name="iconSize">
                       <size>

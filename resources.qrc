@@ -1,5 +1,5 @@
 <RCC>
-  <qresource prefix="roadIcons">
+  <qresource prefix="icons">
     <file>assets/icons/chart-simple-solid.svg</file>
     <file>assets/icons/envelope-solid.svg</file>
     <file>assets/icons/traffic-light-solid.svg</file>

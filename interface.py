@@ -16,50 +16,50 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1047, 762)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setStyleSheet("*{\n"
+        self.centralwidget.setStyleSheet("* {\n"
 "    color: #000;\n"
 "}\n"
 "\n"
-"#centralwidget{\n"
+"#centralwidget {\n"
 "    background-color: #fff;\n"
 "}\n"
 "\n"
-"#head{\n"
+"#head {\n"
 "    background-color: #f7f7fc;\n"
 "}\n"
 "\n"
-"#nav{\n"
+"#nav {\n"
 "    background-color: #dedefc;\n"
 "}\n"
 "\n"
-"QPushButton{\n"
+"QPushButton {\n"
 "    background: transparent;\n"
 "    border: none;\n"
 "    border-radius: 5px;\n"
 "    padding: 5px;\n"
 "}\n"
 "\n"
-"QPushButton:focus{\n"
+"QPushButton:focus {\n"
 "    background-color: #7f7fd7;\n"
 "}\n"
 "\n"
-"#main_button, #cond_button, #msg_button{\n"
+"#main_button, #cond_button, #msg_button {\n"
 "    padding: 10px;\n"
 "    text-align: left;\n"
 "}\n"
 "\n"
-"#logo_button{\n"
+"#logo_button {\n"
 "    background: transparent;\n"
 "    background-color: #f7f7fc;\n"
 "    text-align: left;\n"
 "}\n"
 "\n"
-"#main_submit_btn, #cond_submit_btn, #msg_submit_btn{\n"
+"#main_submit_btn, #cond_submit_btn, #msg_submit_btn {\n"
 "    background-color: #7f7fd7;\n"
 "    border: 2px solid #7f7fd7;\n"
 "}\n"
 "\n"
-"/*#searchFrmae{\n"
+"/*#searchFrmae {\n"
 "    background-color: #eeeeff;\n"
 "}*/\n"
 "\n"
@@ -67,23 +67,23 @@ class Ui_MainWindow(object):
 "    padding: 5px;\n"
 "}\n"
 "\n"
-"QComboBox{\n"
+"QComboBox {\n"
 "    border: 2px solid #7f7fd7;\n"
 "    border-radius: 5px;\n"
 "    padding: 5px;\n"
 "}\n"
 "\n"
-"QDateTimeEdit{\n"
+"QDateTimeEdit {\n"
 "    border: 2px solid #7f7fd7;\n"
 "    border-radius: 5px;\n"
 "    padding: 5px;\n"
 "}\n"
 "\n"
-"/*#resultsFrame{\n"
+"/*#resultsFrame {\n"
 "    background-color: #eeeeff;\n"
 "}*/\n"
 "\n"
-"#style_frame_1, #style_frame_2, #style_frame_3, #style_frame_4, #style_frame_5, #style_frame_6{\n"
+"#style_frame_1, #style_frame_2, #style_frame_3, #style_frame_4, #style_frame_5, #style_frame_6 {\n"
 "    background-color: #cac4f2;\n"
 "    border: 2px solid #000;\n"
 "    border-radius: 20px;\n"
@@ -120,7 +120,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.logo_button.setFont(font)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/roadIcons/assets/icons/traffic-light-solid.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/icons/assets/icons/traffic-light-solid.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.logo_button.setIcon(icon)
         self.logo_button.setIconSize(QtCore.QSize(32, 32))
         self.logo_button.setCheckable(False)
@@ -185,7 +185,7 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         self.main_button.setFont(font)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/roadIcons/assets/icons/chart-simple-solid.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/icons/assets/icons/chart-simple-solid.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.main_button.setIcon(icon1)
         self.main_button.setIconSize(QtCore.QSize(32, 32))
         self.main_button.setObjectName("main_button")
@@ -201,7 +201,7 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         self.cond_button.setFont(font)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/roadIcons/assets/icons/triangle-exclamation-solid.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/icons/assets/icons/triangle-exclamation-solid.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.cond_button.setIcon(icon2)
         self.cond_button.setIconSize(QtCore.QSize(32, 32))
         self.cond_button.setObjectName("cond_button")
@@ -217,7 +217,7 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         self.msg_button.setFont(font)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/roadIcons/assets/icons/envelope-solid.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/icons/assets/icons/envelope-solid.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.msg_button.setIcon(icon3)
         self.msg_button.setIconSize(QtCore.QSize(32, 32))
         self.msg_button.setObjectName("msg_button")
@@ -903,8 +903,8 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.logo_button.setText(_translate("MainWindow", "Traffico"))
         self.main_button.setText(_translate("MainWindow", "   Road Maintainance"))
-        self.cond_button.setText(_translate("MainWindow", "   Road Conditions      "))
-        self.msg_button.setText(_translate("MainWindow", "   Traffic Messages      "))
+        self.cond_button.setText(_translate("MainWindow", "   Road Conditions     "))
+        self.msg_button.setText(_translate("MainWindow", "   Traffic Messages     "))
         self.title_label.setText(_translate("MainWindow", "Search Options"))
         self.form_label_1.setText(_translate("MainWindow", "Location"))
         self.main_input_1.setItemText(0, _translate("MainWindow", "All"))
