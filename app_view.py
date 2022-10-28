@@ -11,46 +11,21 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        # add items to combo boxes
-        self.add_combo_items()
+        self.handle_signals()
 
+        # min window size
+        # self.setMinimumSize(800, 700)
+
+    def handle_signals(self):
         # change pages on clicked
-        self.click_pages()
+        self.ui.main_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.main_page))
+        self.ui.cond_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.cond_page))
+        self.ui.msg_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.msg_page))
 
-        # Send signals to the controller
+        # send signals to the controller
         self.ui.main_submit_btn.clicked.connect(self.controller.submit_tasks)
         self.ui.cond_submit_btn.clicked.connect(self.controller.submit_conditions)
         self.ui.msg_submit_btn.clicked.connect(self.controller.submit_messages)
-
-        # min window size
-        # self.setMinimumSize(800, 640)
-
-    def add_combo_items(self):
-        locations = [
-            "",
-            "All",
-            "Municipalities",
-            "State-roads",
-            "Autori-oulu",
-            "Autori-kuopio",
-            "Paikannin-kuopio",
-            ]
-        msg_types = [
-            "",
-            "TRAFFIC_ANNOUNCEMENT",
-            "EXEMPTED_TRANSPORT",
-            "WEIGHT_RESTRICTION",
-            "ROAD_WORK",
-            ]
-        self.ui.main_input_1.addItems(locations)
-        self.ui.msg_input.addItems(msg_types)
-
-    def click_pages(self):
-        self.ui.main_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.main_page))
-
-        self.ui.cond_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.cond_page))
-
-        self.ui.msg_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.msg_page))
 
     def update_tasks_widget(self, data):
         print(data)
@@ -69,7 +44,6 @@ class MainWindow(QMainWindow):
         # reset input form
         self.ui.cond_input_1.setCurrentIndex(0)
         self.ui.cond_input_2.setCurrentIndex(0)
-        self.ui.cond_input_3.setCurrentIndex(0)
 
         # update results data
         self.ui.cond_data_1.setText(str(data["roadTemperature"]))

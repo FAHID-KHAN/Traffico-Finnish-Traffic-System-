@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1005</width>
-    <height>816</height>
+    <width>1047</width>
+    <height>762</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -307,7 +307,7 @@ QDateTimeEdit{
                      <property name="font">
                       <font>
                        <family>Mulish</family>
-                       <pointsize>10</pointsize>
+                       <pointsize>11</pointsize>
                       </font>
                      </property>
                      <property name="text">
@@ -336,7 +336,7 @@ QDateTimeEdit{
                      <property name="font">
                       <font>
                        <family>Mulish</family>
-                       <pointsize>10</pointsize>
+                       <pointsize>11</pointsize>
                       </font>
                      </property>
                      <property name="text">
@@ -365,7 +365,7 @@ QDateTimeEdit{
                      <property name="font">
                       <font>
                        <family>Mulish</family>
-                       <pointsize>10</pointsize>
+                       <pointsize>11</pointsize>
                       </font>
                      </property>
                      <property name="text">
@@ -431,7 +431,7 @@ QDateTimeEdit{
                 <number>0</number>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="main_page">
                 <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -532,7 +532,7 @@ QDateTimeEdit{
                            <property name="font">
                             <font>
                              <family>Mulish</family>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -572,13 +572,48 @@ QDateTimeEdit{
                            <property name="sizeAdjustPolicy">
                             <enum>QComboBox::AdjustToContents</enum>
                            </property>
+                           <item>
+                            <property name="text">
+                             <string/>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>All</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Municipalities</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>State-roads</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Autori-oulu</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Autori-kuopio</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Paikannin-kuopio</string>
+                            </property>
+                           </item>
                           </widget>
                          </item>
                          <item row="1" column="0">
                           <widget class="QLabel" name="form_label_2">
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -616,7 +651,7 @@ QDateTimeEdit{
                            <property name="font">
                             <font>
                              <family>Mulish</family>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -692,7 +727,7 @@ QDateTimeEdit{
                             <property name="font">
                              <font>
                               <family>Mulish</family>
-                              <pointsize>10</pointsize>
+                              <pointsize>11</pointsize>
                               <weight>75</weight>
                               <bold>true</bold>
                              </font>
@@ -841,7 +876,7 @@ QDateTimeEdit{
                           <widget class="QLabel" name="form_label_5">
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -882,7 +917,7 @@ QDateTimeEdit{
                            <property name="font">
                             <font>
                              <family>Mulish</family>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -923,7 +958,7 @@ QDateTimeEdit{
                            <property name="font">
                             <font>
                              <family>Mulish</family>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -932,32 +967,60 @@ QDateTimeEdit{
                           </widget>
                          </item>
                          <item row="2" column="1">
-                          <widget class="QComboBox" name="cond_input_3">
-                           <property name="sizePolicy">
-                            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                             <horstretch>0</horstretch>
-                             <verstretch>0</verstretch>
-                            </sizepolicy>
-                           </property>
-                           <property name="minimumSize">
-                            <size>
-                             <width>0</width>
-                             <height>30</height>
-                            </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>Mulish</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
-                           <property name="focusPolicy">
-                            <enum>Qt::WheelFocus</enum>
-                           </property>
-                           <property name="editable">
-                            <bool>true</bool>
-                           </property>
-                          </widget>
+                          <layout class="QHBoxLayout" name="horizontalLayout_15">
+                           <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                            <widget class="QRadioButton" name="radioButton_1">
+                             <property name="font">
+                              <font>
+                               <family>Mulish</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>2H</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                            <widget class="QRadioButton" name="radioButton_2">
+                             <property name="font">
+                              <font>
+                               <family>Mulish</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>4H</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                            <widget class="QRadioButton" name="radioButton_3">
+                             <property name="font">
+                              <font>
+                               <family>Mulish</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>6H</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                            <widget class="QRadioButton" name="radioButton_4">
+                             <property name="font">
+                              <font>
+                               <family>Mulish</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>8H</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
                          </item>
                         </layout>
                        </item>
@@ -1002,7 +1065,7 @@ QDateTimeEdit{
                             <property name="font">
                              <font>
                               <family>Mulish</family>
-                              <pointsize>10</pointsize>
+                              <pointsize>11</pointsize>
                               <weight>75</weight>
                               <bold>true</bold>
                              </font>
@@ -1587,7 +1650,7 @@ QDateTimeEdit{
                            <property name="font">
                             <font>
                              <family>Mulish</family>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -1627,6 +1690,31 @@ QDateTimeEdit{
                            <property name="sizeAdjustPolicy">
                             <enum>QComboBox::AdjustToContents</enum>
                            </property>
+                           <item>
+                            <property name="text">
+                             <string/>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>TRAFFIC_ANNOUNCEMENT</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>EXEMPTED_TRANSPORT</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>WEIGHT_RESTRICTION</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>ROAD_WORK</string>
+                            </property>
+                           </item>
                           </widget>
                          </item>
                         </layout>
@@ -1675,7 +1763,7 @@ QDateTimeEdit{
                             <property name="font">
                              <font>
                               <family>Mulish</family>
-                              <pointsize>10</pointsize>
+                              <pointsize>11</pointsize>
                               <weight>75</weight>
                               <bold>true</bold>
                              </font>

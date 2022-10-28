@@ -13,7 +13,7 @@ class Model:
         res = requests.get(url=url, params=params)
         data = json.loads(res.text)
 
-        # TODO: Parse the road maintenance data
+        # TODO: parse the road maintenance data
         self.tasks_data.append(data[0])
 
     def get_conditions_data(self):
@@ -23,7 +23,7 @@ class Model:
         res = requests.get(url=url)
         data = json.loads(res.text)
 
-        # TODO: Parse the road conditions data
+        # TODO: parse the road conditions data
         self.conditions_data = data["weatherData"][0]["roadConditions"][0]
 
     def get_message_data(self, type):
@@ -36,7 +36,7 @@ class Model:
         res = requests.get(url=url, params=params)
         data = json.loads(res.text)
 
-        # Parse the traffic messages data
+        # parse the traffic messages data
         self.message_data = []
         for feature in data['features']:
             row = {}
