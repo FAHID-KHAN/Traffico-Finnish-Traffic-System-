@@ -38,7 +38,7 @@ class Model:
         res = requests.get(url=url)
         data = json.loads(res.text)
 
-        # parse the road maintenance data
+        # calculate tasks per day
         self.tasks_per_day = {}
         try:
             for feature in data['features']:
@@ -58,7 +58,7 @@ class Model:
         res = requests.get(url=url)
         data = json.loads(res.text)
 
-        # TODO: parse the road conditions data
+        # TODO: parse the conditions user inputs
         try:
             self.conditions_data = data["weatherData"][0]["roadConditions"][0]
         except:

@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1047, 748)
+        MainWindow.resize(1080, 860)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("* {\n"
 "    color: #000;\n"
@@ -41,6 +41,10 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton:focus {\n"
 "    background-color: #7f7fd7;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #e5f3ff;\n"
 "}\n"
 "\n"
 "#main_button, #cond_button, #msg_button {\n"
@@ -91,10 +95,10 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.centralwidget.setObjectName("centralwidget")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
-        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout.setSpacing(0)
-        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.verticalLayout_18 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_18.setSpacing(0)
+        self.verticalLayout_18.setObjectName("verticalLayout_18")
         self.container = QtWidgets.QWidget(self.centralwidget)
         self.container.setObjectName("container")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.container)
@@ -386,6 +390,10 @@ class Ui_MainWindow(object):
         self.stacked_widget_1.addWidget(self.blank_page_1)
         self.results_page_1 = QtWidgets.QWidget()
         self.results_page_1.setObjectName("results_page_1")
+        self.horizontalLayout_16 = QtWidgets.QHBoxLayout(self.results_page_1)
+        self.horizontalLayout_16.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_16.setSpacing(0)
+        self.horizontalLayout_16.setObjectName("horizontalLayout_16")
         self.stacked_widget_1.addWidget(self.results_page_1)
         self.horizontalLayout_5.addWidget(self.stacked_widget_1)
         self.verticalLayout_2.addWidget(self.results_frame)
@@ -918,7 +926,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.addWidget(self.stacked_widget)
         self.horizontalLayout_2.addWidget(self.pages)
         self.verticalLayout.addWidget(self.body)
-        self.horizontalLayout.addWidget(self.container)
+        self.verticalLayout_18.addWidget(self.container)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1047</width>
-    <height>748</height>
+    <width>1080</width>
+    <height>860</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,6 +40,10 @@ QPushButton {
 
 QPushButton:focus {
 	background-color: #7f7fd7;
+}
+
+QPushButton:hover {
+	background-color: #e5f3ff;
 }
 
 #main_button, #cond_button, #msg_button {
@@ -90,7 +94,7 @@ QDateTimeEdit {
 }
 </string>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_18">
     <property name="spacing">
      <number>0</number>
     </property>
@@ -777,7 +781,25 @@ QDateTimeEdit {
                           <number>0</number>
                          </property>
                          <widget class="QWidget" name="blank_page_1"/>
-                         <widget class="QWidget" name="results_page_1"/>
+                         <widget class="QWidget" name="results_page_1">
+                          <layout class="QHBoxLayout" name="horizontalLayout_16">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                          </layout>
+                         </widget>
                         </widget>
                        </item>
                       </layout>

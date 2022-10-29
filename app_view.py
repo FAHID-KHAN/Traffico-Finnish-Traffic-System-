@@ -1,5 +1,6 @@
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QHBoxLayout
 from interface import Ui_MainWindow
+from canvas import Canvas
 
 
 class MainWindow(QMainWindow):
@@ -10,11 +11,12 @@ class MainWindow(QMainWindow):
         # init UI
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.setup_canvas()
 
         self.handle_signals()
 
         # min window size
-        # self.setMinimumSize(800, 700)
+        self.setMinimumSize(1080, 860)
 
     def handle_signals(self):
         # change pages on clicked
@@ -26,6 +28,25 @@ class MainWindow(QMainWindow):
         self.ui.main_submit_btn.clicked.connect(self.controller.submit_tasks)
         self.ui.cond_submit_btn.clicked.connect(self.controller.submit_conditions)
         self.ui.msg_submit_btn.clicked.connect(self.controller.submit_messages)
+
+    def setup_canvas(self):
+        self.canvas = Canvas(self.ui.results_page_1)
+        self.toolbar = self.canvas.get_toolbar(self)
+
+        # add the canvas and toolbar to an widget
+        self.ui.plots_layout = QHBoxLayout()
+        self.ui.plots_widget = QWidget()
+
+        self.ui.canvas_layout = QVBoxLayout()
+        self.ui.canvas_widget = QWidget()
+
+        self.ui.canvas_layout.addWidget(self.toolbar)
+        self.ui.canvas_layout.addWidget(self.canvas)
+        self.ui.canvas_widget.setLayout(self.ui.canvas_layout)
+
+        self.ui.plots_layout.addWidget(self.ui.canvas_widget)
+        self.ui.plots_widget.setLayout(self.ui.plots_layout)
+        self.ui.plots_widget.setParent(self.ui.results_page_1)
 
     def get_tasks_input(self):
         inputs = {}
@@ -51,7 +72,9 @@ class MainWindow(QMainWindow):
         # reset input form
         self.ui.main_input_1.setCurrentIndex(0)
 
-        # TODO: update results data
+        # add tasks per day bar plot
+        self.canvas.clear()
+        self.canvas.plot(data)
 
         # show results page
         self.ui.stacked_widget_1.setCurrentIndex(1)
@@ -81,7 +104,7 @@ class MainWindow(QMainWindow):
         # reset input form
         self.ui.msg_input.setCurrentIndex(0)
 
-        # TODO: update results data
+        # TODO: add table
 
         # show results page
         self.ui.stacked_widget_3.setCurrentIndex(1)
