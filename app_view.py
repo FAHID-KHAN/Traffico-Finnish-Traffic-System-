@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QHBoxLayout
+from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QTableWidgetItem
 from interface import Ui_MainWindow
 from canvas import Canvas
 
@@ -104,7 +104,13 @@ class MainWindow(QMainWindow):
         # reset input form
         self.ui.msg_input.setCurrentIndex(0)
 
-        # TODO: add table
+        # add table
+        self.ui.tableWidget.setRowCount(len(data))
+        for row, item in enumerate(data):
+            self.ui.tableWidget.setItem(row, 0, QTableWidgetItem(str(item["countryCode"])))
+            self.ui.tableWidget.setItem(row, 1, QTableWidgetItem(str(item["municipality"])))
+            self.ui.tableWidget.setItem(row, 2, QTableWidgetItem(str(item["road"])))
+            self.ui.tableWidget.setItem(row, 3, QTableWidgetItem(str(item["description"])))
 
         # show results page
         self.ui.stacked_widget_3.setCurrentIndex(1)
