@@ -10,9 +10,9 @@ class Controller:
     def __init__(self):
         self._app = QtWidgets.QApplication(sys.argv)
 
-        # TODO: add external style sheet
-        # with open("assets/style.css","r") as f:
-        #     self._app.setStyleSheet(f.read())
+        # external style sheet
+        with open("assets/style.css","r") as f:
+            self._app.setStyleSheet(f.read())
 
         self._model = Model()
         self._view = MainWindow(self)

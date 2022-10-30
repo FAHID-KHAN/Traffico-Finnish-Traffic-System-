@@ -16,84 +16,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1080, 860)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setStyleSheet("* {\n"
-"    color: #000;\n"
-"}\n"
-"\n"
-"#centralwidget {\n"
-"    background-color: #fff;\n"
-"}\n"
-"\n"
-"#head {\n"
-"    background-color: #f7f7fc;\n"
-"}\n"
-"\n"
-"#nav {\n"
-"    background-color: #dedefc;\n"
-"}\n"
-"\n"
-"QPushButton {\n"
-"    background: transparent;\n"
-"    border: none;\n"
-"    border-radius: 5px;\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    background-color: #7f7fd7;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #e5f3ff;\n"
-"}\n"
-"\n"
-"#main_button, #cond_button, #msg_button {\n"
-"    padding: 10px;\n"
-"    text-align: left;\n"
-"}\n"
-"\n"
-"#logo_button {\n"
-"    background: transparent;\n"
-"    background-color: #f7f7fc;\n"
-"    text-align: left;\n"
-"}\n"
-"\n"
-"#main_submit_btn, #cond_submit_btn, #msg_submit_btn {\n"
-"    background-color: #7f7fd7;\n"
-"    border: 2px solid #7f7fd7;\n"
-"}\n"
-"\n"
-"/*#searchFrmae {\n"
-"    background-color: #eeeeff;\n"
-"}*/\n"
-"\n"
-"QLabel {\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QComboBox {\n"
-"    border: 2px solid #7f7fd7;\n"
-"    border-radius: 5px;\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QDateTimeEdit {\n"
-"    border: 2px solid #7f7fd7;\n"
-"    border-radius: 5px;\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"/*#resultsFrame {\n"
-"    background-color: #eeeeff;\n"
-"}*/\n"
-"\n"
-"#style_frame_1, #style_frame_2, #style_frame_3, #style_frame_4, #style_frame_5, #style_frame_6 {\n"
-"    background-color: #cac4f2;\n"
-"    border: 2px solid #000;\n"
-"    border-radius: 20px;\n"
-"    padding: 5px;\n"
-"}\n"
-"")
+        self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_18 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
@@ -503,6 +426,14 @@ class Ui_MainWindow(object):
         self.buttonGroup.setObjectName("buttonGroup")
         self.buttonGroup.addButton(self.radioButton_1)
         self.horizontalLayout_15.addWidget(self.radioButton_1)
+        self.radioButton_5 = QtWidgets.QRadioButton(self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Mulish")
+        font.setPointSize(10)
+        self.radioButton_5.setFont(font)
+        self.radioButton_5.setObjectName("radioButton_5")
+        self.buttonGroup.addButton(self.radioButton_5)
+        self.horizontalLayout_15.addWidget(self.radioButton_5)
         self.radioButton_2 = QtWidgets.QRadioButton(self.frame)
         font = QtGui.QFont()
         font.setFamily("Mulish")
@@ -1035,7 +966,8 @@ class Ui_MainWindow(object):
         self.cond_input_3.setItemText(0, _translate("MainWindow", "DRY"))
         self.cond_input_3.setItemText(1, _translate("MainWindow", "MOIST"))
         self.form_label_7.setText(_translate("MainWindow", "Forecast Hour"))
-        self.radioButton_1.setText(_translate("MainWindow", "2H"))
+        self.radioButton_1.setText(_translate("MainWindow", "0H"))
+        self.radioButton_5.setText(_translate("MainWindow", "2H"))
         self.radioButton_2.setText(_translate("MainWindow", "4H"))
         self.radioButton_3.setText(_translate("MainWindow", "6H"))
         self.radioButton_4.setText(_translate("MainWindow", "12H"))
