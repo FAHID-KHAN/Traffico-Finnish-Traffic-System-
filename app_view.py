@@ -60,7 +60,8 @@ class MainWindow(QMainWindow):
         inputs = {}
         inputs["location"] = self.ui.cond_input_1.currentText()
         inputs["precipitation"] = self.ui.cond_input_2.currentText()
-        inputs["slipperiness"] = self.ui.cond_input_3.currentText()
+        inputs["condition"] = self.ui.cond_input_3.currentText()
+        inputs["hour"] = self.ui.buttonGroup.checkedButton().text()
         return inputs
 
     def get_messages_input(self):
@@ -104,7 +105,7 @@ class MainWindow(QMainWindow):
         # reset input form
         self.ui.msg_input.setCurrentIndex(0)
 
-        # add table
+        # add table data
         self.ui.tableWidget.setRowCount(len(data))
         for row, item in enumerate(data):
             self.ui.tableWidget.setItem(row, 0, QTableWidgetItem(str(item["countryCode"])))

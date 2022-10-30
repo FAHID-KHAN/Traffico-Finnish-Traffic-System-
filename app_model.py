@@ -58,9 +58,12 @@ class Model:
         res = requests.get(url=url)
         data = json.loads(res.text)
 
-        # TODO: parse the conditions user inputs
+        # parse the conditions user inputs
+        self.conditions_data = {}
         try:
-            self.conditions_data = data["weatherData"][0]["roadConditions"][0]
+            for item in data["weatherData"][0]["roadConditions"]:
+                if item["forecastName"] == inputs["hour"].lower():
+                    self.conditions_data = item
         except:
             self.conditions_data = {}
 

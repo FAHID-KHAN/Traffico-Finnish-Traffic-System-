@@ -912,7 +912,7 @@ QDateTimeEdit {
                             </font>
                            </property>
                            <property name="text">
-                            <string>Precipitation</string>
+                            <string>Precipitation Condition</string>
                            </property>
                           </widget>
                          </item>
@@ -940,8 +940,13 @@ QDateTimeEdit {
                             <enum>Qt::WheelFocus</enum>
                            </property>
                            <property name="editable">
-                            <bool>true</bool>
+                            <bool>false</bool>
                            </property>
+                           <item>
+                            <property name="text">
+                             <string>NO_RAIN_DRY_WEATHER</string>
+                            </property>
+                           </item>
                           </widget>
                          </item>
                          <item row="2" column="0">
@@ -953,7 +958,7 @@ QDateTimeEdit {
                             </font>
                            </property>
                            <property name="text">
-                            <string>Winter Slipperiness</string>
+                            <string>Road Condition</string>
                            </property>
                           </widget>
                          </item>
@@ -981,8 +986,18 @@ QDateTimeEdit {
                             <enum>Qt::WheelFocus</enum>
                            </property>
                            <property name="editable">
-                            <bool>true</bool>
+                            <bool>false</bool>
                            </property>
+                           <item>
+                            <property name="text">
+                             <string>DRY</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>MOIST</string>
+                            </property>
+                           </item>
                           </widget>
                          </item>
                          <item row="3" column="0">
@@ -994,7 +1009,7 @@ QDateTimeEdit {
                             </font>
                            </property>
                            <property name="text">
-                            <string>Hour</string>
+                            <string>Forecast Hour</string>
                            </property>
                           </widget>
                          </item>
@@ -1076,7 +1091,7 @@ QDateTimeEdit {
                                </font>
                               </property>
                               <property name="text">
-                               <string>8H</string>
+                               <string>12H</string>
                               </property>
                               <property name="autoRepeat">
                                <bool>false</bool>
@@ -1679,6 +1694,12 @@ QDateTimeEdit {
                                </widget>
                               </item>
                              </layout>
+                             <zorder>style_frame_1</zorder>
+                             <zorder>style_frame_2</zorder>
+                             <zorder>style_frame_5</zorder>
+                             <zorder>style_frame_3</zorder>
+                             <zorder>style_frame_4</zorder>
+                             <zorder>style_frame_6</zorder>
                             </widget>
                            </item>
                           </layout>
