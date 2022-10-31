@@ -3,10 +3,40 @@ import json
 from urllib.parse import quote
 
 class Model:
+    """
+    Model class of the MVC design pattern.
+
+    This class gets all the data from the Digitraffic API and parses it to send
+    it to the Controller.
+
+    Attributes
+    ----------
+    tasks_per_day: dict
+        The dict of road maintainance data as a histogram of tasks per day.
+    conditions_data: dict
+        The dict of road conditions data.
+    messages_data: list
+        The list of dicts of trafic messages data.
+    coordinates: dict
+        The dict of tuples of hardcoded locations.
+
+    Methods
+    -------
+    get_tasks_data(inputs)
+        Gets the road maintainance data from the API and parses it according to
+        the user inputs.
+    get_conditions_data(inputs)
+        Gets the road conditions data from the API and parses it according to
+        the user inputs.
+    get_messages_data(type)
+        Gets the traffic messages data from the API and parses it according to
+        the user inputs.
+    """
+
     def __init__(self):
         self.tasks_per_day = {}
         self.conditions_data = {}
-        self.message_data = []
+        self.messages_data = []
 
         # hard coded co-ordinates: xMin, yMin, xMax, yMax
         self.coordinates = {
@@ -17,9 +47,11 @@ class Model:
             "Tampere": (23, 61, 24, 62),
         }
 
+
     def get_tasks_data(self, inputs):
         url = "https://tie.digitraffic.fi/api/maintenance/v1/tracking/routes"
         params = {
+            # quote func to encode input text to URI format
             "endFrom": quote(inputs["end_time"]),
             "endBefore": quote(inputs["start_time"]),
             "xMin": self.coordinates[inputs["location"]][0],
@@ -43,15 +75,15 @@ class Model:
         try:
             for feature in data['features']:
                 for task in feature['properties']['tasks']:
-                    self.tasks_per_day[task] = self.tasks_per_day.get(task, 0) + 1
+                    self.tasks_per_day[task] = self.tasks_per_day.get(task,0)+1
         except:
             self.tasks_per_day = {}
 
-        return self.tasks_per_day
 
     def get_conditions_data(self, inputs):
         url = "https://tie.digitraffic.fi/api/v3/data/road-conditions"
-        # join parameters with the api endpoint
+
+        # join input parameters with the api endpoint as queries
         url += "/" + "/".join(list(map(
             str, self.coordinates[inputs["location"]]
         )))
@@ -67,7 +99,6 @@ class Model:
         except:
             self.conditions_data = {}
 
-        return self.conditions_data
 
     def get_messages_data(self, type):
         url = "https://tie.digitraffic.fi/api/traffic-message/v1/messages"
@@ -80,7 +111,7 @@ class Model:
         data = json.loads(res.text)
 
         # parse the traffic messages data
-        self.message_data = []
+        self.messages_data = []
         for feature in data['features']:
             row = {}
             try:
@@ -99,6 +130,4 @@ class Model:
                 row['description'] = feature['properties']['announcements'][0]['location']['description']
             except:
                 row['description'] = None
-            self.message_data.append(row)
-
-        return self.message_data
+            self.messages_data.append(row)
