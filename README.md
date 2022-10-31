@@ -23,7 +23,8 @@ Traffico is a GUI app made using PyQt5 for showing road maintenance, conditions,
 ```
 └──Data Calculation
     └───assets/
-    │   └───icons/
+    │   ├──icons/
+    │   └───style.css
     ├──.gitignore
     ├──app_controller.py
     ├──app_view.py
