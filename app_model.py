@@ -64,7 +64,7 @@ class Model:
         # join parameters with the api endpoint
         url += "?"
         url += "&".join(
-            [f"{k}={params[k]}" for k in params.keys()]
+            [f"{key}={params[key]}" for key in params.keys()]
         )
 
         res = requests.get(url=url)

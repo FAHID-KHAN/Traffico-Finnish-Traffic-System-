@@ -127,7 +127,7 @@ class MainWindow(QMainWindow):
         print(data)
 
         # reset input form
-        self.ui.main_input_1.setCurrentIndex(0)
+        # self.ui.main_input_1.setCurrentIndex(0)
 
         # clear the canvas and add tasks per day bar plot
         self.canvas.clear()
@@ -142,9 +142,9 @@ class MainWindow(QMainWindow):
         print(data)
 
         # reset input form
-        self.ui.cond_input_1.setCurrentIndex(0)
-        self.ui.cond_input_2.setCurrentIndex(0)
-        self.ui.radioButton_1.setChecked(True)
+        # self.ui.cond_input_1.setCurrentIndex(0)
+        # self.ui.cond_input_2.setCurrentIndex(0)
+        # self.ui.radioButton_1.setChecked(True)
 
         # add results data to the square widgets
         self.ui.cond_data_1.setText(str(data["roadTemperature"]))
@@ -163,7 +163,7 @@ class MainWindow(QMainWindow):
         print(data)
 
         # reset input form
-        self.ui.msg_input.setCurrentIndex(0)
+        # self.ui.msg_input.setCurrentIndex(0)
 
         # add table data row by row to the tableWidget
         self.ui.tableWidget.setRowCount(len(data))
