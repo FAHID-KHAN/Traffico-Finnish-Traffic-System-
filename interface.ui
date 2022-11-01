@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1034</width>
-    <height>842</height>
+    <width>1080</width>
+    <height>860</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,99 +15,9 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">*{
-	color: #000;
-}
-
-#centralwidget{
-	background-color: #fff;
-}
-
-#head{
-	background-color: #f7f7fc;
-}
-
-#nav{
-	background-color: #dedefc;
-}
-
-QPushButton{
-	background: transparent;
-	border: none;
-	border-radius: 5px;
-	padding: 5px;
-}
-
-QPushButton:focus{
-	background-color: #7f7fd7;
-}
-
-#main_button{
-	padding: 10px;
-	text-align: left;
-}
-
-#cond_button{
-	padding: 10px;
-	text-align: left;
-}
-
-#msg_button{
-	padding: 10px;
-	text-align: left;
-}
-
-#logo_button{
-	background: transparent;
-	background-color: #f7f7fc;
-	text-align: left;
-}
-
-#main_submit_btn{
-	background-color: #7f7fd7;
-	border: 2px solid #7f7fd7;
-}
-
-#cond_submit_btn{
-	background-color: #7f7fd7;
-	border: 2px solid #7f7fd7;
-}
-
-#msg_submit_btn{
-	background-color: #7f7fd7;
-	border: 2px solid #7f7fd7;
-}
-
-/*#searchFrmae{
-	background-color: #eeeeff;
-}*/
-
-QLabel {
-	padding: 5px;
-}
-
-QComboBox{
-	border: 2px solid #7f7fd7;
-	border-radius: 5px;
-	padding: 5px;
-}
-
-QDateTimeEdit{
-	border: 2px solid #7f7fd7;
-	border-radius: 5px;
-	padding: 5px;
-}
-
-/*#resultsFrame{
-	background-color: #eeeeff;
-}*/
-
-QGraphicsView{
-	border: none;
-}
-</string>
+    <string notr="true"/>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_18">
     <property name="spacing">
      <number>0</number>
     </property>
@@ -180,7 +90,7 @@ QGraphicsView{
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/roadIcons/assets/icons/traffic-light-solid.svg</normaloff>:/roadIcons/assets/icons/traffic-light-solid.svg</iconset>
+              <normaloff>:/icons/assets/icons/traffic-light-solid.svg</normaloff>:/icons/assets/icons/traffic-light-solid.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -324,7 +234,7 @@ QGraphicsView{
                      <property name="font">
                       <font>
                        <family>Mulish</family>
-                       <pointsize>10</pointsize>
+                       <pointsize>11</pointsize>
                       </font>
                      </property>
                      <property name="text">
@@ -332,7 +242,7 @@ QGraphicsView{
                      </property>
                      <property name="icon">
                       <iconset resource="resources.qrc">
-                       <normaloff>:/roadIcons/assets/icons/chart-column-solid.svg</normaloff>:/roadIcons/assets/icons/chart-column-solid.svg</iconset>
+                       <normaloff>:/icons/assets/icons/chart-simple-solid.svg</normaloff>:/icons/assets/icons/chart-simple-solid.svg</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -353,15 +263,15 @@ QGraphicsView{
                      <property name="font">
                       <font>
                        <family>Mulish</family>
-                       <pointsize>10</pointsize>
+                       <pointsize>11</pointsize>
                       </font>
                      </property>
                      <property name="text">
-                      <string>   Road Conditions      </string>
+                      <string>   Road Conditions     </string>
                      </property>
                      <property name="icon">
                       <iconset resource="resources.qrc">
-                       <normaloff>:/roadIcons/assets/icons/triangle-exclamation-solid.svg</normaloff>:/roadIcons/assets/icons/triangle-exclamation-solid.svg</iconset>
+                       <normaloff>:/icons/assets/icons/triangle-exclamation-solid.svg</normaloff>:/icons/assets/icons/triangle-exclamation-solid.svg</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -382,15 +292,15 @@ QGraphicsView{
                      <property name="font">
                       <font>
                        <family>Mulish</family>
-                       <pointsize>10</pointsize>
+                       <pointsize>11</pointsize>
                       </font>
                      </property>
                      <property name="text">
-                      <string>   Traffic Messages      </string>
+                      <string>   Traffic Messages     </string>
                      </property>
                      <property name="icon">
                       <iconset resource="resources.qrc">
-                       <normaloff>:/roadIcons/assets/icons/envelope-solid.svg</normaloff>:/roadIcons/assets/icons/envelope-solid.svg</iconset>
+                       <normaloff>:/icons/assets/icons/envelope-solid.svg</normaloff>:/icons/assets/icons/envelope-solid.svg</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -549,7 +459,7 @@ QGraphicsView{
                            <property name="font">
                             <font>
                              <family>Mulish</family>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -558,7 +468,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="0" column="1">
-                          <widget class="QComboBox" name="loc_input">
+                          <widget class="QComboBox" name="main_input_1">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -568,7 +478,7 @@ QGraphicsView{
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -589,13 +499,38 @@ QGraphicsView{
                            <property name="sizeAdjustPolicy">
                             <enum>QComboBox::AdjustToContents</enum>
                            </property>
+                           <item>
+                            <property name="text">
+                             <string>Helsinki</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Kuopio</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Oulu</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Pori</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Tampere</string>
+                            </property>
+                           </item>
                           </widget>
                          </item>
                          <item row="1" column="0">
                           <widget class="QLabel" name="form_label_2">
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -604,7 +539,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QDateTimeEdit" name="start_input">
+                          <widget class="QDateTimeEdit" name="main_input_2">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -614,7 +549,7 @@ QGraphicsView{
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -622,6 +557,16 @@ QGraphicsView{
                              <family>Mulish</family>
                              <pointsize>10</pointsize>
                             </font>
+                           </property>
+                           <property name="dateTime">
+                            <datetime>
+                             <hour>9</hour>
+                             <minute>0</minute>
+                             <second>0</second>
+                             <year>2022</year>
+                             <month>1</month>
+                             <day>19</day>
+                            </datetime>
                            </property>
                            <property name="calendarPopup">
                             <bool>true</bool>
@@ -633,7 +578,7 @@ QGraphicsView{
                            <property name="font">
                             <font>
                              <family>Mulish</family>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -642,7 +587,7 @@ QGraphicsView{
                           </widget>
                          </item>
                          <item row="2" column="1">
-                          <widget class="QDateTimeEdit" name="end_input">
+                          <widget class="QDateTimeEdit" name="main_input_3">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -652,7 +597,7 @@ QGraphicsView{
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -660,6 +605,16 @@ QGraphicsView{
                              <family>Mulish</family>
                              <pointsize>10</pointsize>
                             </font>
+                           </property>
+                           <property name="dateTime">
+                            <datetime>
+                             <hour>2</hour>
+                             <minute>0</minute>
+                             <second>0</second>
+                             <year>2022</year>
+                             <month>1</month>
+                             <day>19</day>
+                            </datetime>
                            </property>
                            <property name="calendarPopup">
                             <bool>true</bool>
@@ -703,13 +658,13 @@ QGraphicsView{
                             <property name="minimumSize">
                              <size>
                               <width>120</width>
-                              <height>30</height>
+                              <height>34</height>
                              </size>
                             </property>
                             <property name="font">
                              <font>
                               <family>Mulish</family>
-                              <pointsize>10</pointsize>
+                              <pointsize>11</pointsize>
                               <weight>75</weight>
                               <bold>true</bold>
                              </font>
@@ -749,7 +704,25 @@ QGraphicsView{
                           <number>0</number>
                          </property>
                          <widget class="QWidget" name="blank_page_1"/>
-                         <widget class="QWidget" name="results_page_1"/>
+                         <widget class="QWidget" name="results_page_1">
+                          <layout class="QHBoxLayout" name="horizontalLayout_16">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                          </layout>
+                         </widget>
                         </widget>
                        </item>
                       </layout>
@@ -840,75 +813,34 @@ QGraphicsView{
                           <number>10</number>
                          </property>
                          <property name="verticalSpacing">
-                          <number>20</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="topMargin">
-                          <number>10</number>
+                          <number>5</number>
                          </property>
                          <property name="rightMargin">
-                          <number>15</number>
-                         </property>
-                         <property name="bottomMargin">
                           <number>10</number>
                          </property>
-                         <item row="0" column="0">
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="1" column="0">
                           <widget class="QLabel" name="form_label_5">
                            <property name="font">
                             <font>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
-                            <string>Precipitation</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="0" column="1">
-                          <widget class="QComboBox" name="prec_input">
-                           <property name="sizePolicy">
-                            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                             <horstretch>0</horstretch>
-                             <verstretch>0</verstretch>
-                            </sizepolicy>
-                           </property>
-                           <property name="minimumSize">
-                            <size>
-                             <width>0</width>
-                             <height>30</height>
-                            </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>Mulish</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
-                           <property name="focusPolicy">
-                            <enum>Qt::WheelFocus</enum>
-                           </property>
-                           <property name="editable">
-                            <bool>true</bool>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="1" column="0">
-                          <widget class="QLabel" name="form_label_6">
-                           <property name="font">
-                            <font>
-                             <family>Mulish</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
-                           <property name="text">
-                            <string>Winter Slipperiness</string>
+                            <string>Precipitation Condition</string>
                            </property>
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QComboBox" name="slip_input">
+                          <widget class="QComboBox" name="cond_input_2">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -918,7 +850,7 @@ QGraphicsView{
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -931,25 +863,30 @@ QGraphicsView{
                             <enum>Qt::WheelFocus</enum>
                            </property>
                            <property name="editable">
-                            <bool>true</bool>
+                            <bool>false</bool>
                            </property>
+                           <item>
+                            <property name="text">
+                             <string>NO_RAIN_DRY_WEATHER</string>
+                            </property>
+                           </item>
                           </widget>
                          </item>
                          <item row="2" column="0">
-                          <widget class="QLabel" name="form_label_7">
+                          <widget class="QLabel" name="form_label_6">
                            <property name="font">
                             <font>
                              <family>Mulish</family>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
-                            <string>Hour</string>
+                            <string>Road Condition</string>
                            </property>
                           </widget>
                          </item>
                          <item row="2" column="1">
-                          <widget class="QComboBox" name="hr_input">
+                          <widget class="QComboBox" name="cond_input_3">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                              <horstretch>0</horstretch>
@@ -959,7 +896,7 @@ QGraphicsView{
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -972,8 +909,213 @@ QGraphicsView{
                             <enum>Qt::WheelFocus</enum>
                            </property>
                            <property name="editable">
-                            <bool>true</bool>
+                            <bool>false</bool>
                            </property>
+                           <item>
+                            <property name="text">
+                             <string>DRY</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>MOIST</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QLabel" name="form_label_7">
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>11</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Forecast Hour</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="1">
+                          <widget class="QFrame" name="frame">
+                           <layout class="QHBoxLayout" name="horizontalLayout_15">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>5</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>5</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>80</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>5</number>
+                            </property>
+                            <item>
+                             <widget class="QRadioButton" name="radioButton_1">
+                              <property name="font">
+                               <font>
+                                <family>Mulish</family>
+                                <pointsize>11</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>0H</string>
+                              </property>
+                              <property name="checked">
+                               <bool>true</bool>
+                              </property>
+                              <attribute name="buttonGroup">
+                               <string notr="true">buttonGroup</string>
+                              </attribute>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QRadioButton" name="radioButton_5">
+                              <property name="font">
+                               <font>
+                                <family>Mulish</family>
+                                <pointsize>10</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>2H</string>
+                              </property>
+                              <attribute name="buttonGroup">
+                               <string notr="true">buttonGroup</string>
+                              </attribute>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QRadioButton" name="radioButton_2">
+                              <property name="font">
+                               <font>
+                                <family>Mulish</family>
+                                <pointsize>10</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>4H</string>
+                              </property>
+                              <attribute name="buttonGroup">
+                               <string notr="true">buttonGroup</string>
+                              </attribute>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QRadioButton" name="radioButton_3">
+                              <property name="font">
+                               <font>
+                                <family>Mulish</family>
+                                <pointsize>10</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>6H</string>
+                              </property>
+                              <attribute name="buttonGroup">
+                               <string notr="true">buttonGroup</string>
+                              </attribute>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QRadioButton" name="radioButton_4">
+                              <property name="font">
+                               <font>
+                                <family>Mulish</family>
+                                <pointsize>10</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>12H</string>
+                              </property>
+                              <property name="autoRepeat">
+                               <bool>false</bool>
+                              </property>
+                              <property name="autoExclusive">
+                               <bool>true</bool>
+                              </property>
+                              <attribute name="buttonGroup">
+                               <string notr="true">buttonGroup</string>
+                              </attribute>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="0" column="0">
+                          <widget class="QLabel" name="form_label_4">
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>11</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Location</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QComboBox" name="cond_input_1">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>34</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Mulish</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="focusPolicy">
+                            <enum>Qt::WheelFocus</enum>
+                           </property>
+                           <property name="editable">
+                            <bool>false</bool>
+                           </property>
+                           <property name="insertPolicy">
+                            <enum>QComboBox::NoInsert</enum>
+                           </property>
+                           <property name="sizeAdjustPolicy">
+                            <enum>QComboBox::AdjustToContents</enum>
+                           </property>
+                           <item>
+                            <property name="text">
+                             <string>Helsinki</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Kuopio</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Oulu</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Pori</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Tampere</string>
+                            </property>
+                           </item>
                           </widget>
                          </item>
                         </layout>
@@ -1013,13 +1155,13 @@ QGraphicsView{
                             <property name="minimumSize">
                              <size>
                               <width>120</width>
-                              <height>30</height>
+                              <height>34</height>
                              </size>
                             </property>
                             <property name="font">
                              <font>
                               <family>Mulish</family>
-                              <pointsize>10</pointsize>
+                              <pointsize>11</pointsize>
                               <weight>75</weight>
                               <bold>true</bold>
                              </font>
@@ -1055,8 +1197,452 @@ QGraphicsView{
                        </property>
                        <item>
                         <widget class="QStackedWidget" name="stacked_widget_2">
+                         <property name="currentIndex">
+                          <number>0</number>
+                         </property>
                          <widget class="QWidget" name="blank_page_2"/>
-                         <widget class="QWidget" name="results_page_2"/>
+                         <widget class="QWidget" name="results_page_2">
+                          <layout class="QHBoxLayout" name="horizontalLayout_14">
+                           <item>
+                            <widget class="QFrame" name="frame_2">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QGridLayout" name="gridLayout">
+                              <property name="leftMargin">
+                               <number>50</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>20</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>50</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>20</number>
+                              </property>
+                              <property name="horizontalSpacing">
+                               <number>40</number>
+                              </property>
+                              <property name="verticalSpacing">
+                               <number>22</number>
+                              </property>
+                              <item row="0" column="0">
+                               <widget class="QFrame" name="style_frame_1">
+                                <property name="font">
+                                 <font>
+                                  <family>Mulish</family>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>1</number>
+                                </property>
+                                <property name="midLineWidth">
+                                 <number>0</number>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_12">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item alignment="Qt::AlignTop">
+                                  <widget class="QLabel" name="label_1">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>12</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Road Temperature</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                  <widget class="QLabel" name="cond_data_1">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>20</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>+1.9</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item row="0" column="1">
+                               <widget class="QFrame" name="style_frame_2">
+                                <property name="font">
+                                 <font>
+                                  <family>Mulish</family>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>1</number>
+                                </property>
+                                <property name="midLineWidth">
+                                 <number>0</number>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_13">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item alignment="Qt::AlignTop">
+                                  <widget class="QLabel" name="label_2">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>12</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Temperature</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                  <widget class="QLabel" name="cond_data_2">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>20</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>+1.4</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item row="2" column="0">
+                               <widget class="QFrame" name="style_frame_5">
+                                <property name="font">
+                                 <font>
+                                  <family>Mulish</family>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>1</number>
+                                </property>
+                                <property name="midLineWidth">
+                                 <number>0</number>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_14">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item alignment="Qt::AlignTop">
+                                  <widget class="QLabel" name="label_5">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>12</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Type</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                  <widget class="QLabel" name="cond_data_5">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>20</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>OBSERVATION</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item row="1" column="0">
+                               <widget class="QFrame" name="style_frame_3">
+                                <property name="font">
+                                 <font>
+                                  <family>Mulish</family>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>1</number>
+                                </property>
+                                <property name="midLineWidth">
+                                 <number>0</number>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_15">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item alignment="Qt::AlignTop">
+                                  <widget class="QLabel" name="label_3">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>12</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Wind Speed</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                  <widget class="QLabel" name="cond_data_3">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>20</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>2.0</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item row="2" column="1">
+                               <widget class="QFrame" name="style_frame_6">
+                                <property name="font">
+                                 <font>
+                                  <family>Mulish</family>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>1</number>
+                                </property>
+                                <property name="midLineWidth">
+                                 <number>0</number>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_16">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item alignment="Qt::AlignTop">
+                                  <widget class="QLabel" name="label_6">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>12</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Reliability</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                  <widget class="QLabel" name="cond_data_6">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>20</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>SUCCESSFUL</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item row="1" column="1">
+                               <widget class="QFrame" name="style_frame_4">
+                                <property name="font">
+                                 <font>
+                                  <family>Mulish</family>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="lineWidth">
+                                 <number>1</number>
+                                </property>
+                                <property name="midLineWidth">
+                                 <number>0</number>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_17">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item alignment="Qt::AlignTop">
+                                  <widget class="QLabel" name="label_4">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>12</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>Wind Direction</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                  <widget class="QLabel" name="cond_data_4">
+                                   <property name="font">
+                                    <font>
+                                     <family>Mulish</family>
+                                     <pointsize>20</pointsize>
+                                     <weight>75</weight>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>134</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
+                             <zorder>style_frame_1</zorder>
+                             <zorder>style_frame_2</zorder>
+                             <zorder>style_frame_5</zorder>
+                             <zorder>style_frame_3</zorder>
+                             <zorder>style_frame_4</zorder>
+                             <zorder>style_frame_6</zorder>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
                         </widget>
                        </item>
                       </layout>
@@ -1166,7 +1752,7 @@ QGraphicsView{
                            <property name="font">
                             <font>
                              <family>Mulish</family>
-                             <pointsize>10</pointsize>
+                             <pointsize>11</pointsize>
                             </font>
                            </property>
                            <property name="text">
@@ -1185,7 +1771,7 @@ QGraphicsView{
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>30</height>
+                             <height>34</height>
                             </size>
                            </property>
                            <property name="font">
@@ -1206,6 +1792,26 @@ QGraphicsView{
                            <property name="sizeAdjustPolicy">
                             <enum>QComboBox::AdjustToContents</enum>
                            </property>
+                           <item>
+                            <property name="text">
+                             <string>TRAFFIC_ANNOUNCEMENT</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>EXEMPTED_TRANSPORT</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>WEIGHT_RESTRICTION</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>ROAD_WORK</string>
+                            </property>
+                           </item>
                           </widget>
                          </item>
                         </layout>
@@ -1248,13 +1854,13 @@ QGraphicsView{
                             <property name="minimumSize">
                              <size>
                               <width>120</width>
-                              <height>30</height>
+                              <height>34</height>
                              </size>
                             </property>
                             <property name="font">
                              <font>
                               <family>Mulish</family>
-                              <pointsize>10</pointsize>
+                              <pointsize>11</pointsize>
                               <weight>75</weight>
                               <bold>true</bold>
                              </font>
@@ -1303,7 +1909,166 @@ QGraphicsView{
                              <number>0</number>
                             </property>
                             <widget class="QWidget" name="blank_page_3"/>
-                            <widget class="QWidget" name="results_page_3"/>
+                            <widget class="QWidget" name="results_page_3">
+                             <layout class="QHBoxLayout" name="horizontalLayout">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>15</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>15</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>15</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>15</number>
+                              </property>
+                              <item>
+                               <widget class="QTableWidget" name="tableWidget">
+                                <property name="font">
+                                 <font>
+                                  <family>Mulish</family>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::NoFrame</enum>
+                                </property>
+                                <property name="editTriggers">
+                                 <set>QAbstractItemView::NoEditTriggers</set>
+                                </property>
+                                <property name="showGrid">
+                                 <bool>true</bool>
+                                </property>
+                                <property name="gridStyle">
+                                 <enum>Qt::NoPen</enum>
+                                </property>
+                                <property name="cornerButtonEnabled">
+                                 <bool>false</bool>
+                                </property>
+                                <attribute name="horizontalHeaderCascadingSectionResizes">
+                                 <bool>true</bool>
+                                </attribute>
+                                <attribute name="horizontalHeaderMinimumSectionSize">
+                                 <number>40</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderDefaultSectionSize">
+                                 <number>140</number>
+                                </attribute>
+                                <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                                 <bool>true</bool>
+                                </attribute>
+                                <attribute name="horizontalHeaderStretchLastSection">
+                                 <bool>true</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderVisible">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderHighlightSections">
+                                 <bool>false</bool>
+                                </attribute>
+                                <attribute name="verticalHeaderStretchLastSection">
+                                 <bool>false</bool>
+                                </attribute>
+                                <column>
+                                 <property name="text">
+                                  <string>Country Code</string>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <family>Mulish</family>
+                                   <pointsize>10</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="textAlignment">
+                                  <set>AlignCenter</set>
+                                 </property>
+                                 <property name="background">
+                                  <color>
+                                   <red>247</red>
+                                   <green>247</green>
+                                   <blue>252</blue>
+                                  </color>
+                                 </property>
+                                </column>
+                                <column>
+                                 <property name="text">
+                                  <string>Municipality</string>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <family>Mulish</family>
+                                   <pointsize>10</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="textAlignment">
+                                  <set>AlignCenter</set>
+                                 </property>
+                                 <property name="background">
+                                  <color>
+                                   <red>247</red>
+                                   <green>247</green>
+                                   <blue>252</blue>
+                                  </color>
+                                 </property>
+                                </column>
+                                <column>
+                                 <property name="text">
+                                  <string>Road</string>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <family>Mulish</family>
+                                   <pointsize>10</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="textAlignment">
+                                  <set>AlignCenter</set>
+                                 </property>
+                                 <property name="background">
+                                  <color>
+                                   <red>247</red>
+                                   <green>247</green>
+                                   <blue>252</blue>
+                                  </color>
+                                 </property>
+                                </column>
+                                <column>
+                                 <property name="text">
+                                  <string>Description</string>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <family>Mulish</family>
+                                   <pointsize>10</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="textAlignment">
+                                  <set>AlignCenter</set>
+                                 </property>
+                                 <property name="background">
+                                  <color>
+                                   <red>247</red>
+                                   <green>247</green>
+                                   <blue>252</blue>
+                                  </color>
+                                 </property>
+                                </column>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
                            </widget>
                           </item>
                          </layout>
@@ -1335,4 +2100,7 @@ QGraphicsView{
   <include location="resources.qrc"/>
  </resources>
  <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
 </ui>

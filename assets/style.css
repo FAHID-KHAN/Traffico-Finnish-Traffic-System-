@@ -1,0 +1,71 @@
+* {
+	color: #000;
+}
+
+#centralwidget {
+	background-color: #fff;
+}
+
+#head {
+	background-color: #f7f7fc;
+}
+
+#nav {
+	background-color: #dedefc;
+}
+
+QPushButton {
+	background: transparent;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+QPushButton:focus {
+	background-color: #7f7fd7;
+}
+
+QPushButton:hover {
+	background-color: #e5f3ff;
+}
+
+#main_button, #cond_button, #msg_button {
+	padding: 10px;
+	text-align: left;
+}
+
+#logo_button {
+	background: transparent;
+	background-color: #f7f7fc;
+	text-align: left;
+}
+
+#main_submit_btn, #cond_submit_btn, #msg_submit_btn {
+	background-color: #7f7fd7;
+	border: 2px solid #7f7fd7;
+}
+
+QLabel {
+	padding: 5px;
+}
+
+QComboBox, QDateTimeEdit {
+	border: 2px solid #7f7fd7;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+/* #tableWidget {
+    background-color: #f7f7fc;
+}
+
+#search_frame, #search_frame_2, #search_frame_3 {
+background-color: #f7f7fc;
+} */
+
+#style_frame_1, #style_frame_2, #style_frame_3, #style_frame_4, #style_frame_5, #style_frame_6 {
+	background-color: #cac4f2;
+	border: 2px solid #000;
+	border-radius: 20px;
+	padding: 5px;
+}

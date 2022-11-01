@@ -14,6 +14,7 @@ Traffico is a GUI app made using PyQt5 for showing road maintenance, conditions,
 ### Dependencies
 
 - [PyQt5](#)
+- [matplotlib](#)
 - [requests](#)
 
 
@@ -22,11 +23,13 @@ Traffico is a GUI app made using PyQt5 for showing road maintenance, conditions,
 ```
 └──Data Calculation
     └───assets/
-    │   └───icons/
+    │   ├──icons/
+    │   └───style.css
     ├──.gitignore
     ├──app_controller.py
     ├──app_view.py
     ├──app_model.py
+    ├──canvas.py
     ├──interface.py
     ├──interface.ui
     ├──resources_rc.py
