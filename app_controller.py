@@ -33,6 +33,10 @@ class Controller:
     submit_messages()
         On traffic messages submit-button-press the user input is taken,
         the data is parsed from the API, and the result is shown as table.
+    submit_combined()
+        On combined reports submit-button-press the user input is taken,
+        the data is parsed from the APIs, and the result is shown as a
+        combination of different results.
     """
 
     def __init__(self):
@@ -59,6 +63,14 @@ class Controller:
     def submit_messages(self):
         self._model.get_messages_data(self._view.get_messages_input())
         self._view.update_messages_widget(self._model.messages_data)
+
+
+    def submit_combined(self):
+        self._model.get_combined_data(self._view.get_combined_input())
+        self._view.update_combined_widget(self._model.tasks_per_day,
+                                          self._model.conditions_data,
+                                          self._model.messages_data,
+                                          self._model.weather_data)
 
 
     def run(self):

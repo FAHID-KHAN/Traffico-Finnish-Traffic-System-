@@ -29,7 +29,7 @@ QPushButton:hover {
 	background-color: #e5f3ff;
 }
 
-#main_button, #cond_button, #msg_button {
+#main_button, #cond_button, #msg_button, #comb_button {
 	padding: 10px;
 	text-align: left;
 }
@@ -40,7 +40,7 @@ QPushButton:hover {
 	text-align: left;
 }
 
-#main_submit_btn, #cond_submit_btn, #msg_submit_btn {
+#main_submit_btn, #cond_submit_btn, #msg_submit_btn, #comb_submit_btn {
 	background-color: #7f7fd7;
 	border: 2px solid #7f7fd7;
 }
@@ -63,9 +63,20 @@ QComboBox, QDateTimeEdit {
 background-color: #f7f7fc;
 } */
 
-#style_frame_1, #style_frame_2, #style_frame_3, #style_frame_4, #style_frame_5, #style_frame_6 {
+#style_frame_1, #style_frame_2, #style_frame_3, #style_frame_4, #style_frame_5, #style_frame_6, #style_frame_7, #style_frame_8, #style_frame_9, #style_frame_10, #style_frame_11, #style_frame_12 {
 	background-color: #cac4f2;
 	border: 2px solid #000;
 	border-radius: 20px;
 	padding: 5px;
+}
+
+#style_frame_13, #style_frame_14, #style_frame_15 {
+	border: 2px solid #000;
+	border-radius: 20px;
+	padding: 5px;
+}
+
+#results_widget_1, #results_widget_2, #results_widget_3, #results_widget_4 {
+	border: 2px solid #000;
+	border-radius: 20px;
 }

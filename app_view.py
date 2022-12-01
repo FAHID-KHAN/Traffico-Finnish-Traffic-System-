@@ -34,12 +34,16 @@ class MainWindow(QMainWindow):
         Gets the user inputs from the road conditions input form.
     get_messages_input()
         Gets the user input from the traffic messages input form.
+    get_combined_input()
+        Gets the user input from the combined reports input form.
     update_tasks_widget(data)
         Updates the road maintainance page using the data from the Model.
     update_conditions_widget(data)
         Updates the road conditions page using the data from the Model.
     update_messages_widget(data)
         Updates the traffic messages page using the data from the Model.
+    update_combined_widget(tasks_data, conditions_data, messages_data, weather_data)
+        Updates the combined reports page using the data from the Model.
     """
 
     def __init__(self, controller, *args, **kwargs):
@@ -65,37 +69,34 @@ class MainWindow(QMainWindow):
         self.ui.main_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.main_page))
         self.ui.cond_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.cond_page))
         self.ui.msg_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.msg_page))
+        self.ui.comb_button.clicked.connect(lambda: self.ui.stacked_widget.setCurrentWidget(self.ui.comb_page))
 
         # send signals to the controller
         self.ui.main_submit_btn.clicked.connect(self.controller.submit_tasks)
         self.ui.cond_submit_btn.clicked.connect(self.controller.submit_conditions)
         self.ui.msg_submit_btn.clicked.connect(self.controller.submit_messages)
+        self.ui.comb_submit_btn.clicked.connect(self.controller.submit_combined)
 
 
     def setup_canvas(self):
         # init canvas
-        self.canvas = Canvas(self.ui.results_page_1)
-        self.toolbar = self.canvas.get_toolbar(self)
+        self.canvas = Canvas()
+        self.toolbar = self.canvas.get_toolbar()
+        # 2nd canvas for combined report
+        self.canvas_2 = Canvas()
+        self.toolbar_2 = self.canvas_2.get_toolbar()
 
-        # layouts and widgets for the canvas and the toolbar
+        # layouts for the canvas and the toolbar
         self.ui.canvas_layout = QVBoxLayout()
-        self.ui.canvas_widget = QWidget()
+        self.ui.canvas_layout_2 = QVBoxLayout()
 
         # add the canvas and the toolbar to the layout and then to the widget
         self.ui.canvas_layout.addWidget(self.toolbar)
         self.ui.canvas_layout.addWidget(self.canvas)
         self.ui.canvas_widget.setLayout(self.ui.canvas_layout)
-
-        # container layout and widget
-        self.ui.container_layout = QHBoxLayout()
-        self.ui.container_widget = QWidget()
-
-        # add the canvas widget to the container layout and then to the widget
-        self.ui.container_layout.addWidget(self.ui.canvas_widget)
-        self.ui.container_widget.setLayout(self.ui.container_layout)
-
-        # add the container widget to the road maintenance page
-        self.ui.container_widget.setParent(self.ui.results_page_1)
+        self.ui.canvas_layout_2.addWidget(self.toolbar_2)
+        self.ui.canvas_layout_2.addWidget(self.canvas_2)
+        self.ui.canvas_widget_2.setLayout(self.ui.canvas_layout_2)
 
 
     def get_tasks_input(self):
@@ -119,7 +120,26 @@ class MainWindow(QMainWindow):
 
 
     def get_messages_input(self):
-        return self.ui.msg_input.currentText()
+        inputs = {}
+        inputs["type"] = self.ui.msg_input.currentText()
+        return inputs
+
+
+    def get_combined_input(self):
+        inputs = {}
+
+        utc = "yyyy-MM-ddThh:mm:ssZ"
+        inputs["location"] = self.ui.comb_input_1.currentText()
+        inputs["type"] = self.ui.comb_input_2.currentText()
+        inputs["start_time"] = self.ui.comb_input_3.dateTime().toString(utc)
+        inputs["end_time"] = self.ui.comb_input_4.dateTime().toString(utc)
+
+        # default inputs for unspecified items (taken from road conditions page)
+        inputs["precipitation"] = self.ui.cond_input_2.currentText()
+        inputs["condition"] = self.ui.cond_input_3.currentText()
+        inputs["hour"] = self.ui.buttonGroup.checkedButton().text()
+
+        return inputs
 
 
     def update_tasks_widget(self, data):
@@ -175,3 +195,40 @@ class MainWindow(QMainWindow):
 
         # switch to the results page
         self.ui.stacked_widget_3.setCurrentIndex(1)
+
+
+    def update_combined_widget(self, tasks_data, conditions_data, messages_data, weather_data):
+        # DEBUG: prints the data to the shell
+        print(weather_data)
+
+        # reset input form
+        # self.ui.msg_input.setCurrentIndex(0)
+
+
+        # add weather data
+        self.ui.weather_data_1.setText(str(weather_data["t2m"]))
+        self.ui.weather_data_2.setText(str(weather_data["ws_10min"]))
+        self.ui.weather_data_3.setText(str(weather_data["n_man"]))
+
+        # add road maintainance plots
+        self.canvas_2.clear()
+        self.canvas_2.plot(tasks_data)
+
+        # add road conditions data
+        self.ui.cond_data_7.setText(str(conditions_data["roadTemperature"]))
+        self.ui.cond_data_8.setText(str(conditions_data["temperature"]))
+        self.ui.cond_data_9.setText(str(conditions_data["windSpeed"]))
+        self.ui.cond_data_10.setText(str(conditions_data["windDirection"]))
+        self.ui.cond_data_11.setText(str(conditions_data["type"]))
+        self.ui.cond_data_12.setText(str(conditions_data["reliability"]))
+
+        # add traffic mesages table data
+        self.ui.tableWidget_2.setRowCount(len(messages_data))
+        for row, item in enumerate(messages_data):
+            self.ui.tableWidget_2.setItem(row, 0, QTableWidgetItem(str(item["countryCode"])))
+            self.ui.tableWidget_2.setItem(row, 1, QTableWidgetItem(str(item["municipality"])))
+            self.ui.tableWidget_2.setItem(row, 2, QTableWidgetItem(str(item["road"])))
+            self.ui.tableWidget_2.setItem(row, 3, QTableWidgetItem(str(item["description"])))
+
+        # switch to the results page
+        self.ui.stacked_widget_4.setCurrentIndex(1)
