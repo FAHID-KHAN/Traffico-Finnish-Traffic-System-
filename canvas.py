@@ -27,16 +27,13 @@ class Canvas(FigureCanvas):
         Clears the current plot.
     """
 
-    def __init__(self, parent=None):
+    def __init__(self):
         # init figure and axes
         self.fig, self.ax = plt.subplots(figsize=(1, 1), dpi=100)
         super().__init__(self.fig)
-        self.setParent(parent)
-        # interactive mode on
-        plt.ion()
 
 
-    def get_toolbar(self, parent):
+    def get_toolbar(self, parent=None):
         return NavigationToolbar(self, parent)
 
 
@@ -49,6 +46,8 @@ class Canvas(FigureCanvas):
         self.ax.set_xlabel("Tasks")
         self.ax.set_ylabel("Frequency")
         self.ax.set_title("Tasks per day")
+        # interactive mode on
+        plt.ion()
 
 
     def clear(self):

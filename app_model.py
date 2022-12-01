@@ -1,6 +1,8 @@
 import requests
 import json
 from urllib.parse import quote
+import xml.etree.ElementTree as ET
+
 
 class Model:
     """
@@ -23,20 +25,35 @@ class Model:
     Methods
     -------
     get_tasks_data(inputs)
-        Gets the road maintainance data from the API and parses it according to
-        the user inputs.
+        Gets the road maintainance data from the Digitraffic API and parses it
+        according to the user inputs.
     get_conditions_data(inputs)
-        Gets the road conditions data from the API and parses it according to
-        the user inputs.
+        Gets the road conditions data from the Digitraffic API and parses it
+        according to the user inputs.
     get_messages_data(type)
-        Gets the traffic messages data from the API and parses it according to
-        the user inputs.
+        Gets the traffic messages data from the Digitraffic API and parses it
+        according to the user inputs.
+    get_weather_data(type)
+        Gets the weather data from the FMI API and parses it according to the
+        user inputs.
+    get_combined_data(type)
+        Calls all other methods for combined reports.
     """
 
     def __init__(self):
         self.tasks_per_day = {}
-        self.conditions_data = {}
         self.messages_data = []
+        self.conditions_data = {
+            "countryCode": None,
+            "municipality": None,
+            "road": None,
+            "description": None,
+            }
+        self.weather_data = {
+            "t2m": None,
+            "ws_10min": None,
+            "n_man": None,
+            }
 
         # hard coded co-ordinates: xMin, yMin, xMax, yMax
         self.coordinates = {
@@ -52,8 +69,8 @@ class Model:
         url = "https://tie.digitraffic.fi/api/maintenance/v1/tracking/routes"
         params = {
             # quote func to encode input text to URI format
-            "endFrom": quote(inputs["end_time"]),
-            "endBefore": quote(inputs["start_time"]),
+            "endFrom": quote(inputs["start_time"]),
+            "endBefore": quote(inputs["end_time"]),
             "xMin": self.coordinates[inputs["location"]][0],
             "yMin": self.coordinates[inputs["location"]][1],
             "xMax": self.coordinates[inputs["location"]][2],
@@ -76,7 +93,7 @@ class Model:
             for feature in data['features']:
                 for task in feature['properties']['tasks']:
                     self.tasks_per_day[task] = self.tasks_per_day.get(task,0)+1
-        except:
+        except KeyError:
             self.tasks_per_day = {}
 
 
@@ -96,14 +113,14 @@ class Model:
             for item in data["weatherData"][0]["roadConditions"]:
                 if item["forecastName"] == inputs["hour"].lower():
                     self.conditions_data = item
-        except:
+        except (KeyError, IndexError):
             self.conditions_data = {}
 
 
-    def get_messages_data(self, type):
+    def get_messages_data(self, inputs):
         url = "https://tie.digitraffic.fi/api/traffic-message/v1/messages"
         params = {
-            "situationType": type,
+            "situationType": inputs["type"],
             "inactiveHours": 0,
             "includeAreaGeometry": False
             }
@@ -116,18 +133,50 @@ class Model:
             row = {}
             try:
                 row['countryCode'] = feature['properties']['announcements'][0]['location']['countryCode']
-            except:
-                row['countryCode'] = None
+            except (KeyError, IndexError): pass
             try:
                 row['municipality'] = feature['properties']['announcements'][0]['locationDetails']['roadAddressLocation']['primaryPoint']['municipality']
-            except:
-                row['municipality'] = None
+            except (KeyError, IndexError): pass
             try:
                 row['road'] = feature['properties']['announcements'][0]['locationDetails']['roadAddressLocation']['primaryPoint']['roadAddress']['road']
-            except:
-                row['road'] = None
+            except (KeyError, IndexError): pass
             try:
                 row['description'] = feature['properties']['announcements'][0]['location']['description']
-            except:
-                row['description'] = None
+            except (KeyError, IndexError): pass
             self.messages_data.append(row)
+
+
+    def get_weather_data(self, inputs):
+        url = "https://opendata.fmi.fi/wfs"
+        params = {
+            "request": "getFeature",
+            "version": "2.0.0",
+            "storedquery_id": "fmi::observations::weather::simple",
+            "bbox": "{},{},{},{}".format(
+                self.coordinates[inputs["location"]][0],
+                self.coordinates[inputs["location"]][1],
+                self.coordinates[inputs["location"]][2],
+                self.coordinates[inputs["location"]][3]),
+            "starttime": inputs["start_time"],
+            "endtime": inputs["end_time"],
+            "parameters": "t2m,ws_10min,n_man",
+            }
+
+        res = requests.get(url=url, params=params)
+        xml_data = ET.fromstring(res.content)
+        try:
+            self.weather_data["t2m"] = xml_data[0][0][3].text
+        except IndexError: pass
+        try:
+            self.weather_data["ws_10min"] = xml_data[1][0][3].text
+        except IndexError: pass
+        try:
+            self.weather_data["n_man"] = xml_data[2][0][3].text
+        except IndexError: pass
+
+
+    def get_combined_data(self, inputs):
+        self.get_tasks_data(inputs)
+        self.get_conditions_data(inputs)
+        self.get_messages_data(inputs)
+        self.get_weather_data(inputs)
